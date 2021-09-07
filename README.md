@@ -17,7 +17,7 @@
 
 {{:funktionsweise-git.png?650|}}
 
-## Lab 1: Install (latest) ==== 
+## Lab 1: Install (latest) 
 
 ```
 # go to https://www.eclipse.org/downloads
@@ -31,7 +31,7 @@ start eclipse installer
 # Eclipse will be installed 
 ```
 
-## Increase Icon-Size (works on oxygen and newer) ==== 
+## Increase Icon-Size (works on oxygen and newer)  
 
   * You might want to have bigger icon size (tested on Windows) 
   * Search for "eclipse.ini" 
@@ -44,7 +44,7 @@ start eclipse installer
 -Dswt.autoScale.method=nearest
 ```
 
-==== The starting point (I) : the git-repository ====
+## The starting point (I) : the git-repository 
 
   * <del>"git init" initializes a repository</del> 
   * New Repo in eclipse 
@@ -59,7 +59,7 @@ start eclipse installer
   * this means: folders/files are fully functional, also if the .git - folder is deleted  
 
 
-==== Starting with a project : 1 and 2 ====
+## Starting with a project : 1 and 2
 
   * You can also start with a project 
     * e.g. New -> Java Project ->
