@@ -74,13 +74,13 @@ start eclipse installer
             * ~/git/RepoName/.git
 
 
-==== Icons within EGit ====
+## Icons within EGit
 
 {{ ::symbols-egit.png?nolink&400 |}}
 
-==== git commands in Eclipse (EGit) ==== 
+## git commands in Eclipse (EGit)
 
-https://wiki.eclipse.org/EGit/Mapping_Git_Commands
+  * https://wiki.eclipse.org/EGit/Mapping_Git_Commands
 
 ^ git ^ eclipse/EGit ^
 |add: | "Add to Index" toolbar/menubar item to add all changes in selected files. "Team -> \\ Add to Index" to add all changes in selected files. \\ Drag-and-drop in "Git Staging" view Drag-and-drop in "Synchronization" view. \\ "Compare With.." to stage or unstage line-by-line | 
@@ -108,31 +108,34 @@ https://wiki.eclipse.org/EGit/Mapping_Git_Commands
 | status: | implicit in decorations, "Git Staging View" | 
 | tag: | "Team -> Advanced -> Tag...", annotated tags only toolbar of Commit views, ditto |
 
-==== The helper : git status ====
+## The helper : git status
 
   * Within egit implicitly in status of files (decorations) 
   * Git Staging View   
 
-==== The staging area / index : ====
+## The staging area / index :
 
   * <del>Here you will decide, what gets shipped (for the next "git commit")</del>
   * <del>For doing so, we will use: git add</del>
-  * In Eclipse you will see this information in the staging area:<code>
+  * In Eclipse you will see this information in the staging area:
+
+```
 Right Click (Mouse) -> Team -> Commit
 or: 
 Windows -> Show View -> Other -> Git -> Git Staging  
-</code>
+```
 
-==== The details : git add ====
+## The details : git add 
 
   * Done within the Git Staging Area in EGit / Eclipse 
-<code>
+
+```
 Right Click (Mouse) -> Team -> Commit
 or: 
 Windows -> Show View -> Other -> Git -> Git Staging 
-</code>
+```
  
-==== Git and its objects ==== 
+## Git and its objects  
 
   * To manage its data, git uses objects
   * e.g. when you add a file with git add filename \\ a new object is created 
@@ -142,19 +145,20 @@ Windows -> Show View -> Other -> Git -> Git Staging
     * commits
     * tags
 
-==== SHA1 - checksums & backgrounds ====
+## SHA1 - checksums & backgrounds 
 
-    * git extensively works with checksums in the background
-    * a checksum is a 40-char long hex-string ( a unique checksum of the data ) 
-    * every object gets a checksum
-      * blogs
-      * trees
-      * commits
-      * tags
+  * git extensively works with checksums in the background
+  * a checksum is a 40-char long hex-string ( a unique checksum of the data ) 
+  * every object gets a checksum
+    * blogs
+    * trees
+    * commits
+    * tags
 
-==== Lab 4: Find created object ==== 
+## Lab 4: Find created object
 
-<code> # Works only within git bash or Linux 
+```
+# Works only within git bash or Linux 
 # Just for reference here !! 
 cd .git 
 cd objects 
@@ -162,50 +166,59 @@ ls -la
 # you will find a directory name with the 
 # first 2 chars of the object, e.g. 
 # drwxr-xr-x   3 jmetzger  staff  102 26 Okt 16:28 4f
+```
 
+```
 # change into that directory
 # Hint: Replace name with your directory name 
 cd 4f 
 # your object 
 ls -la 
 # 51d02eb27b6bdf1741ad48ccf6f7dc3326bbd2
+```
 
+```
 # now let us see the content 
 # (taking the 4 letters of the object is sufficient) 
 git cat-file -p 4f51
 my first line 
+```
 
+```
 # and the type of object 
 git cat-file -t 4f51
 blob
-</code>
+```
 
-==== Git - your identity (Why ?) ====
+## Git - your identity (Why ?)
 
   * Working in a team: Who has done what ? 
   * Makes it easier to organize work.
   * You can easier search work based on Author (=Identity)
-  * <code> On newer versions your forced
+
+```
+On newer versions your forced
 to set your identity before you
 you can publish your work to a remote server (=push)
-</code> 
+``` 
 
-==== Lab 5a: Set up your identity Git (git bash/commandline)==== 
+## Lab 5a: Set up your identity Git (git bash/commandline)
 
-<code>
-  # within your project (folder training)
-  git config --global user.name "Jochen Metzger"
-  git config --global user.email "j.metzger@t3company.de"
-  # Checking your config: 
-  git config --list
-  # Checking your config property:
-  git config user.email 
-</code>
+```
+# within your project (folder training)
+git config --global user.name "Jochen Metzger"
+git config --global user.email "j.metzger@t3company.de"
+# Checking your config: 
+git config --list
+# Checking your config property:
+git config user.email 
+```
 
-==== Lab 5b: Set up your identity (Eclipse/EGit) ==== 
+## Lab 5b: Set up your identity (Eclipse/EGit)
 
-* http://wiki.eclipse.org/EGit/User_Guide#Identifying_yourself
-* <code>
+  * http://wiki.eclipse.org/EGit/User_Guide#Identifying_yourself
+
+```
 Click Preferences > Team > Git > Configuration
 Click New Entry and enter the key value pairs:
 Key: user.name
@@ -214,14 +227,14 @@ Value: YourUsernameHere
 And
 Key: user.email
 Value: YourEmailHere
-</code>
+```
 
-==== The journey: there we go to the (local) repository ====
+## The journey: there we go to the (local) repository
 
   * the next step: get the files/directory into the repo 
   * with "git commit" the work is transferred (after git add or git add .)
 
-==== Git commit - in detail (command line) ====
+## Git commit - in detail (command line) ====
 
   * git commit (commit all files from staging) 
   * git commit -a (in addition all files that have been deleted or known (and have changed))
