@@ -82,7 +82,8 @@ start eclipse installer
 
   * https://wiki.eclipse.org/EGit/Mapping_Git_Commands
 
-^ git ^ eclipse/EGit ^
+| git | eclipse/EGit |
+| --- | --- |
 |add: | "Add to Index" toolbar/menubar item to add all changes in selected files. "Team -> \\ Add to Index" to add all changes in selected files. \\ Drag-and-drop in "Git Staging" view Drag-and-drop in "Synchronization" view. \\ "Compare With.." to stage or unstage line-by-line | 
 | annotate: | "Team -> Show in Annotations" |
 | branch:  | "Checkout"/"Switch To" toolbar/menubar item to list, \\ create, rename and delete \\  local branches and remote-references. \\ toolbar of Commit views to create a branch from that commit right-click menu of commits listed in history |
