@@ -234,27 +234,27 @@ Value: YourEmailHere
   * the next step: get the files/directory into the repo 
   * with "git commit" the work is transferred (after git add or git add .)
 
-## Git commit - in detail (command line) ====
+## Git commit - in detail (command line)
 
   * git commit (commit all files from staging) 
   * git commit -a (in addition all files that have been deleted or known (and have changed))
   * git commit / git commit -a opens an editor where i can enter the commit message
   * git commit -m "my commit-message" - makes committing a oneliner 
 
-==== Git commit (Eclipse/EGit) ==== 
+## Git commit (Eclipse/EGit) 
 
-  * <code>
+```
 1) Right Click on Project 
 2) Team -> Commit 
-</code>
+```
 
-==== Git log ==== 
+## Git log 
 
   * All commits are logged in to the log 
   * You can access the log with 
     * git log 
 
-==== Git log - what in detail ? (commandline) ====
+## Git log - what in detail ? (commandline) 
 
   * Output the log: \\ git log 
   * --
@@ -262,17 +262,17 @@ Value: YourEmailHere
   * --
   * all from a specific author: \\ git log --author=Max 
 
-==== Git log (Eclipse/EGit) ==== 
+## Git log (Eclipse/EGit) 
 
-<code>
+```
 Right Click -> Show In -> History 
 or:
 Right Click -> Team -> Show In -> History 
-</code>
+```
 
-==== Lab 6: Commit the changes and watch the log (commandline only) ==== 
+## Lab 6: Commit the changes and watch the log (commandline only) 
 
-<code>
+```
 # look into the status
 git status
 
@@ -286,9 +286,9 @@ git status
 # you will notice the same commit-id as 
 # in the commit message   
 git log 
-</code>
+```
 
-==== Git aliases (commandline) ==== 
+## Git aliases (commandline) 
 
   * With aliases you can create your own git commands ;o) 
   * Creation Syntax:
@@ -299,44 +299,45 @@ git log
   * You can still add params to the command on usage:
     * git cc -m "my commit" 
 
-==== Git log - beautified (commandline) ==== 
+## Git log - beautified (commandline) 
 
   * Why ? 
     * For later usage, it will be easier to have a beautified log
-  * <code>
+
+```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-</code>
+```
 
-==== Lab 7: Setup beautified log (commandline) ==== 
+## Lab 7: Setup beautified log (commandline) 
 
-<code>
+```
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # use beautified log 
 git lg 
-</code>
+```
 
-==== Branches -> why ? ====
+## Branches -> why ? 
 
   * important concept of git 
   * work on features easily 
   * independent from remote repository 
 
-==== Create branches -> 1-step-version ====
+## Create branches -> 1-step-version 
 
   * git checkout -b feature-4711 
 
-==== Branch - which one is active ? ====
+## Branch - which one is active ? 
 
   * git branch (star means active) 
 
-==== change to another branch (commandline) ====
+## change to another branch (commandline) 
 
   * git checkout feature-4711 
 
-==== Lab 8: Create a new branch + work there (commandline) ==== 
+## Lab 8: Create a new branch + work there (commandline) 
 
-<code>
+```
 git checkout -b feature-4711 
 # check which branch is active 
 git branch 
@@ -355,7 +356,7 @@ git commit -am "New feature-4711.txt"
 git status
 # do you notice, that the branch is ahead ? 
 git lg 
-</code>
+```
 
 
 ====  Merge changes -> merge ====
