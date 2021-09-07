@@ -358,8 +358,7 @@ git status
 git lg 
 ```
 
-
-====  Merge changes -> merge ====
+##  Merge changes -> merge 
 
   * You can merge, if you want to get changes from another branch
   * A typical scenario would be:
@@ -372,13 +371,14 @@ git lg
     * with -->
     * git merge your-feature-branch   
 
-==== Delete branch (commandline) ====
+## Delete branch (commandline)
 
   * You should cleanup unused branches as frequent as possible 
   * git branch -d feature-4711 (you should not be within the branch) 
 
-==== Lab 9: Merge branch (fast-forward) - from other feature (commandline) ====
-<code> 
+## Lab 9: Merge branch (fast-forward) - from other feature (commandline) 
+
+```
 # we did this before 
 # and worked on branch 
 git checkout feature-4711
@@ -387,9 +387,9 @@ git merge feature-4711
 # you will notice, that both branches are at the same commit-id 
 git lg 
 git branch -d feature-4711 
-</code>
+```
 
-==== Merge - FastForward - How come ? ==== 
+## Merge - FastForward - How come ? 
 
   * Fast-Forward just move the pointer forward
   * HEAD always points to tip of the checked out branch
@@ -397,8 +397,9 @@ git branch -d feature-4711
     * Content is itsef a reference 
     * Reference holds Commit-Id. 
 
-==== Lab 10: Exploring HEAD (commandline) ==== 
-<code>
+## Lab 10: Exploring HEAD (commandline) 
+
+``` 
 cd .git 
 cat HEAD 
 # ref: refs/heads/master
@@ -407,9 +408,9 @@ cat refs/heads/master
 # compare this with the last commit - id
 # What do you notice ? 
 git lg -1 
-</code>
+```
 
-==== Replay changes in other branch + changes on current branch -> rebase (commandline) ====
+## Replay changes in other branch + changes on current branch -> rebase (commandline) 
 
   * Change into branch (z.B.feature-4711) 
   * git rebase master 
@@ -421,31 +422,35 @@ git lg -1
     - only do rebasing in your own "local" branch (NO ! collaborative branches)
     - never rebase, after push is done and branch is shared with others ! 
 
-==== Back in time -> reset (commandline) ====
+## Back in time -> reset (commandline) 
 
   * e.g. git reset --hard HEAD~1
   * attention: only use it, when changes are not published (remotely) yet.
   * -> It is your command,  IN CASE your are telling yourself, omg, what's that, what did i do here, let me undo that
 
-==== Cancellation -> revert (commandline) ====
+## Cancellation -> revert (commandline) 
 
   * Take back the last change \\ But: you will have an additional log entry
-  * <code># commandline 
+
+``` 
+# commandline 
 git revert
-</code>
-  * <code> Eclipse/EGit 
+```
+
+```
+# Eclipse/EGit 
 1) Go to Log -> Right Click -> Show In -> History 
 2) Right Click on Commit (you want to revert) -> Revert 
-</code>
+```
 
-==== From -> local repository -> to -> remote repository -> why ? ====
+## From -> local repository -> to -> remote repository -> why ? 
 
-why ?
-
+### Why ? 
+ 
   * data is saved outside of my system 
   * others can access it too (collaboration, e.g. on a feature)
 
-==== Remote repository - examples ====
+## Remote repository - examples 
 
   * gitlab 
   * github 
@@ -453,11 +458,11 @@ why ?
   * --
   * under the hood: git. 
 
-==== Login to gitlab ====
+## Login to gitlab / bitbucket 
 
   * Introduction of the gui  
 
-==== (Windows -> git bash) create private/public key pair ====
+## (Windows -> git bash) create private/public key pair ====
 
   - desktop -> right click  -> git bash
   - ssh-keygen -t rsa # set password ! 
@@ -468,36 +473,38 @@ why ?
   - (gitlab) menü -> profile settings -> SSH keys -> paste key and click button "Add Key" 
   - Test the connection with ssh git@git.server.com 
 
-==== Create a repo under gitlab ====
+## Create a repo under gitlab/bitbucket ====
 
   - login
   - create repo (schulung) 
   - introduce repo locally
 
-==== Publish the local changes remote ====
+## Publish the local changes remote 
 
   * (commandline) git push origin master 
   * (Eclipse/Egit): Right click -> Team -> Push to Upstream 
 
-==== Tagging of a current version (locally) ====
+## Tagging of a current version (locally)
 
   * eclipse/EGit -> Team -> Advanced -> Tag 
-  * <code>
+
+```
 git tag -a v0.0.1 -m "Commit Message"
 git push --tags 
-</code>
+```
+## Getting an old revision of a file 
 
-==== Getting an old revision of a file ==== 
-
-<code>1) Rechte Maustaste 
+```
+1) Rechte Maustaste 
 2) Replace With (on top of entry Team) Previous Revision/Commit 
-</code>
-==== Clone an online session into a new (none existant) directory ==== 
+```
+
+## Clone an online session into a new (none existant) directory ==== 
 
   * git bash (on the desktop - right click) 
   * git clone https://url schulung2
 
-==== where is configuration saved ? ====
+## where is configuration saved ? 
 
   * on your local system the general configuration is saved in a file.
   * Linux/Mac: ~/.gitconfig
@@ -506,14 +513,14 @@ git push --tags
   * example Linux: /home/jmetzger/.gitconfig
   * example Windows: C:\Users\<user_name>\.gitconfig 
 
-==== Commit - messages: what for and why should they be speaking ? ====
+## Commit - messages: what for and why should they be speaking ? 
 
   * other participants should be able to see changes based on commits
   * good commit - message: reduces the time for search (for other participants) - more efficient
   * search more easily and thoroughly (e.g. for later debugging)  
   * eventually included in the changelog and other tools
 
-==== Commit - message : structure ====
+## Commit - message : structure 
 
   * line 1: short! summary only(!) chars and letters 
   * line 1: max. 50 chars
@@ -525,25 +532,27 @@ git push --tags
   * line 3: time: presence 
   * line 3: do not write, what do you did, but why.
 
-==== The cleanup: removal and untracking : git rm (commandline) ====
+## The cleanup: removal and untracking : git rm (commandline) 
 
   * git rm \\ -- \\ removes the files locally (working directory) as well as for next staging. In the next commit the file will not be contained anymore.
   * git rm --cached \\ -- \\ (if i only want to "untrack" a file (so it should be in the repo anymore), but want to keep it locally)
 
-==== Troubleshooting ssh -> repo (tortoise/openssh) ====
+## Troubleshooting ssh -> repo (tortoise/openssh) 
 
+```
 It is either possible to use openssh or plink.exe. 
 Here are the most important settings for ssh.
-
+```
+ 
   * git bash: echo $GIT_SSH \\ it should be: C:\Program Files\Git\usr\bin\ssh.exe here 
   * if not: export GIT_SSH="C:\Program Files\Git\usr\bin\ssh.exe" 
   * in addition in tortoisegit under settings -> network the should be the following: \\ C:\Program Files\Git\usr\bin\ssh.exe 
 
-==== Workflows -> gitflow workflow ====
+## Workflows -> gitflow workflow 
 
 {{ :gitflow-workflow-4.png|}}
 
-==== Documentation ==== 
+## Documentation 
 
   * http://wiki.eclipse.org/EGit/User_Guide
 
