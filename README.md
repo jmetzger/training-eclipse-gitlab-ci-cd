@@ -84,8 +84,7 @@ start eclipse installer
 
 | git | eclipse/EGit |
 | --- | --- |
-|add: | "Add to Index" toolbar/menubar item to add all changes in selected files. 
-"Team -> \\ Add to Index" to add all changes in selected files. \\ Drag-and-drop in "Git Staging" view Drag-and-drop in "Synchronization" view. \\ "Compare With.." to stage or unstage line-by-line | 
+|add: | "Add to Index" <br>toolbar/menubar item to add all changes in selected files. <br> "Team -> Add to Index" to add all changes in selected files. <br> Drag-and-drop in "Git Staging" view <br>Drag-and-drop in "Synchronization" view. <br> "Compare With.." to stage or unstage line-by-line | 
 | annotate: | "Team -> Show in Annotations" |
 | branch:  | "Checkout"/"Switch To" toolbar/menubar item to list, \\ create, rename and delete \\  local branches and remote-references. \\ toolbar of Commit views to create a branch from that commit right-click menu of commits listed in history |
 | checkout: | "Checkout"/"Switch To" toolbar/menubar item to checkout a local branch. \\ "Replace With..." to checkout a single file. \\ right-click menu of commits listed in history or reflog right-click menu of branches in "Git Repositories" view toolbar of Commit views |
