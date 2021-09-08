@@ -536,9 +536,17 @@ git push --tags
 
 ## The cleanup: removal and untracking : git rm (commandline) 
 
-  * git rm \\ -- \\ removes the files locally (working directory) as well as for next staging. In the next commit the file will not be contained anymore.
-  * git rm --cached \\ -- \\ (if i only want to "untrack" a file (so it should be in the repo anymore), but want to keep it locally)
+``` 
+git rm 
+# removes the files locally (working directory) 
+# as well as for next staging. 
+# In the next commit the file will not be contained anymore.
 
+git rm --cached 
+# if i only want to "untrack" a file (so it should be in the repo anymore), 
+# but want to keep it locally)
+```
+ 
 ## Troubleshooting ssh -> repo (tortoise/openssh) 
 
 ```
