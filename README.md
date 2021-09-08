@@ -77,7 +77,7 @@ start eclipse installer
 
 ## Icons within EGit
 
-![EGit - items](/images/symbols-egit.png)
+![EGit - items](/images/symbols-egit.png?200)
 <img src="/images/symbols-egit.png" width="400">
 
 ## git commands in Eclipse (EGit)
