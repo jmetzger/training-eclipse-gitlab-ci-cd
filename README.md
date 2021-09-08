@@ -10,7 +10,8 @@
 ## Git - how does it work ? 
 
   * git takes snapshots 
-  * git works offline \\ (git saves the complete project including all versions)
+  * git works offline
+    * (git saves the complete project including all versions)
   * all files are saved in objects.  
 
 ## Git - the flow
@@ -76,7 +77,8 @@ start eclipse installer
 
 ## Icons within EGit
 
-{{ ::symbols-egit.png?nolink&400 |}}
+![EGit - items](/images/symbols-egit.png)
+<img src="/images/symbols-egit.png" width="400">
 
 ## git commands in Eclipse (EGit)
 
