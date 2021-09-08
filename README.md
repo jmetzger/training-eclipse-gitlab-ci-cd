@@ -469,7 +469,7 @@ git revert
   - ssh-keygen -t rsa # set password ! 
   - cd ../.ssh 
   - cat id_rsa.pub # that's the public key 
-  - # Mark key with mouse -> then -> CTRL + C 
+  - Mark key with mouse -> then -> CTRL + C 
   - open gitlab in browser 
   - (gitlab) menü -> profile settings -> SSH keys -> paste key and click button "Add Key" 
   - Test the connection with ssh git@git.server.com 
