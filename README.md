@@ -1,11 +1,10 @@
 # Eclipse with (E)git Training
 
-## Projects with git
 
-  * Linux kernel project  
-  * github
-  * ruby on rails
-  * phpmyadmin
+## Agenda 
+
+  1. Technical Background 
+     * [Projects](/projects-with-git.md)
 
 ## Git - how does it work ? 
 
