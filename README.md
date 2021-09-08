@@ -5,13 +5,10 @@
   1. Technical Background 
      * [Projects with git](/projects-with-git.md)
      * [How does it work?](/git-how-does-it-work.md)
+     * [The flow of git](/git-the-flow.md)
 
   1. Installation 
      * [Installation of Eclipse](/installation/eclipse.md) 
-
-## Git - the flow
-
-![Git - The flow](/images/funktionsweise-git.png?650)
 
 
 
