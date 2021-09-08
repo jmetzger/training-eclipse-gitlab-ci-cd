@@ -14,6 +14,7 @@
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
      * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
+     * [Konfigurationseinstellung löschen](/tipps-tricks/config-loeschen.md)
 
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
