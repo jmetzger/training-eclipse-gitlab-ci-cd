@@ -542,4 +542,5 @@ Here are the most important settings for ssh.
   * http://wiki.eclipse.org/EGit/User_Guide
   * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
   * https://git-scm.com/book/de/v2
+  * https://git-lfs.github.com/
 
