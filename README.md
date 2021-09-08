@@ -9,8 +9,7 @@
 
   1. Installation 
      * [Installation of Eclipse](/installation/eclipse.md) 
-
-
+     * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
 
 ## Increase Icon-Size (works on oxygen and newer)  
 
