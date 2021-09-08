@@ -4,7 +4,7 @@
 ## Agenda 
 
   1. Technical Background 
-     * [Projects](/projects-with-git.md)
+     * [Projects with git](/projects-with-git.md)
 
 ## Git - how does it work ? 
 
