@@ -1,36 +1,19 @@
 # Eclipse with (E)git Training
 
-
 ## Agenda 
 
   1. Technical Background 
      * [Projects with git](/projects-with-git.md)
      * [How does it work?](/git-how-does-it-work.md)
 
-## Git - how does it work ? 
-
-  * git takes snapshots 
-  * git works offline
-    * (git saves the complete project including all versions)
-  * all files are saved in objects.  
+  1. Installation 
+     * [Installation of Eclipse](/installation/eclipse.md) 
 
 ## Git - the flow
 
 ![Git - The flow](/images/funktionsweise-git.png?650)
 
-## Lab 1: Install (latest) 
 
-```
-# go to https://www.eclipse.org/downloads
-# Choose 32bit or 64bit 
-# in most cases 64bit (nowerdays) 
-# -> Downloads Eclipse installer 
-
-start eclipse installer 
-# -> choose "Eclipse IDE for Java Developers"
-
-# Eclipse will be installed 
-```
 
 ## Increase Icon-Size (works on oxygen and newer)  
 
