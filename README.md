@@ -15,7 +15,7 @@
 
 ## Git - the flow
 
-{{:funktionsweise-git.png?650|}}
+![Git - The flow](/images/funktionsweise-git.png?650)
 
 ## Lab 1: Install (latest) 
 
