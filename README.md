@@ -11,6 +11,9 @@
      * [Installation of Eclipse](/installation/eclipse.md) 
      * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
 
+  1. Tipps & Tricks 
+     * [Increasing Icon Size](/tipps-tricks/icon-size.md)
+
 ## Increase Icon-Size (works on oxygen and newer)  
 
   * You might want to have bigger icon size (tested on Windows) 
