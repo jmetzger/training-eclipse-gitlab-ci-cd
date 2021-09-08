@@ -5,6 +5,7 @@
 
   1. Technical Background 
      * [Projects with git](/projects-with-git.md)
+     * [How does it work?](/git-how-does-it-work.md)
 
 ## Git - how does it work ? 
 
