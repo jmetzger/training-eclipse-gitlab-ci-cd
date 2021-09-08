@@ -14,19 +14,6 @@
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
 
-## Increase Icon-Size (works on oxygen and newer)  
-
-  * You might want to have bigger icon size (tested on Windows) 
-  * Search for "eclipse.ini" 
-  * Open in editor (e.g. Notepad++)
-  * Add the following 3 lines (at the end of the file):
-
-```
--Dswt.enable.autoScale=true
--Dswt.autoScale=200
--Dswt.autoScale.method=nearest
-```
-
 ## The starting point (I) : the git-repository 
 
   * <del>"git init" initializes a repository</del> 
