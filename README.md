@@ -13,6 +13,7 @@
 
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
+     * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
 
 ## The starting point (I) : the git-repository 
 
