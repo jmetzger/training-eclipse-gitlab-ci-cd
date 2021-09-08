@@ -15,6 +15,9 @@
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
      * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
 
+  1. Documentation 
+     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+
 ## The starting point (I) : the git-repository 
 
   * <del>"git init" initializes a repository</del> 
