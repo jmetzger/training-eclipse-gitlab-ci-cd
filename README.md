@@ -11,6 +11,22 @@
      * [Installation of Eclipse](/installation/eclipse.md) 
      * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
 
+  1. Commands (with tipps & tricks) 
+     * [git add + Tipps & Tricks](add.md)
+     * [git commit](commit.md)
+     * [git log](log.md)
+     * [git config](config.md) 
+     * [git show](show.md)
+     * [Needed commands for starters](started-commands.md)
+     * [git branch](branch.md)
+     * [git checkout](checkout.md)
+     * [git merge](merge.md)
+     * [git tag](tag.md)
+   
+  1. Advanced Commands 
+     * [git reflog](reflog.md) 
+     * [git reset - Back in Time](reset.md)   
+
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
      * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
