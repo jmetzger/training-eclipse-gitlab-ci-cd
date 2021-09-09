@@ -560,4 +560,5 @@ Here are the most important settings for ssh.
   * https://git-scm.com/book/de/v2
   * https://git-lfs.github.com/
   * https://de.wikipedia.org/wiki/Liste_von_Git-GUIs
+  * https://git-scm.com/download/gui/windows
 
