@@ -30,6 +30,15 @@ Enterprise for own installation
 https://github.com/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_loc=hero&ref_page=%2Fenterprise
 ```
 
+## bitbucket 
+
+```
+bitbucket cloud - damit arbeiten wir
+bitbucket server - lokale Installation (wird es nach 2021 nicht geben, bis ma 2024) 
+bitbucket data server 
+
+```
+
 ## Kleinere Server (können fast nix) 
 
 ```
