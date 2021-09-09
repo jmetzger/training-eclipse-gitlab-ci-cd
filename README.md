@@ -553,6 +553,12 @@ Here are the most important settings for ssh.
 
 {{ :gitflow-workflow-4.png|}}
 
+## Git Guis 
+  
+  * https://github.com/DmitryZhelnin/git-extensions-intellij
+  * https://github.com/gitextensions/gitextensions/
+  * https://git-fork.com/
+  
 ## Documentation 
 
   * http://wiki.eclipse.org/EGit/User_Guide
