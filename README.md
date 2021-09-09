@@ -25,7 +25,11 @@
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
-     * [git reset - Back in Time](reset.md)   
+     * [git reset - Back in Time](reset.md)  
+
+  1. GIT-Server 
+     * [GIT Server](git-server.md) 
+
 
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
