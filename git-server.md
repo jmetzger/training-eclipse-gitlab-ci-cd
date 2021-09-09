@@ -41,3 +41,16 @@ https://www.admin-magazin.de/Das-Heft/2012/02/Git-Server-selbst-installieren/(of
 
 web-git 
 ```
+
+## Freie Alternativen (online - cloud) 
+
+```
+codeberg.org 
+
+```
+
+## Freie Alternativen (offline ;o) - on premise)
+
+```
+https://gitea.io/en-us/ (codeberg basiert darauf) 
+```
