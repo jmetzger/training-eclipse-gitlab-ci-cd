@@ -33,6 +33,8 @@
   1. GIT-Server 
      * [GIT Server](git-server.md) 
 
+  1. Golden 
+     * [5-goldene-Regeln](5-goldene-regeln.md)
 
   1. Tipps & Tricks 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
