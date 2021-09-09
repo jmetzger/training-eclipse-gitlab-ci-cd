@@ -68,5 +68,9 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 
   * https://github.com/jmetzger/mariadb-fuer-entwickler.git
 
+## Welchen nehme ich (Vergleich bitbucket / github) 
+
+  * https://gist.github.com/juderosen/8410710
+
 
 
