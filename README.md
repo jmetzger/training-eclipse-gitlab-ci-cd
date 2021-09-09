@@ -27,6 +27,9 @@
      * [git reflog](reflog.md) 
      * [git reset - Back in Time](reset.md)  
 
+  1. Features 
+     * [Partial Clone](partial-clone.md) 
+
   1. GIT-Server 
      * [GIT Server](git-server.md) 
 
