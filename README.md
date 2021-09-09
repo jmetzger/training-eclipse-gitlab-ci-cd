@@ -559,4 +559,5 @@ Here are the most important settings for ssh.
   * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
   * https://git-scm.com/book/de/v2
   * https://git-lfs.github.com/
+  * https://de.wikipedia.org/wiki/Liste_von_Git-GUIs
 
