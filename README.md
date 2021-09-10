@@ -177,29 +177,7 @@ git cat-file -t 4f51
 blob
 ```
 
-## Git - your identity (Why ?)
 
-  * Working in a team: Who has done what ? 
-  * Makes it easier to organize work.
-  * You can easier search work based on Author (=Identity)
-
-```
-On newer versions your forced
-to set your identity before you
-you can publish your work to a remote server (=push)
-``` 
-
-## Lab 5a: Set up your identity Git (git bash/commandline)
-
-```
-# within your project (folder training)
-git config --global user.name "Jochen Metzger"
-git config --global user.email "j.metzger@t3company.de"
-# Checking your config: 
-git config --list
-# Checking your config property:
-git config user.email 
-```
 
 ## Lab 5b: Set up your identity (Eclipse/EGit)
 
@@ -216,17 +194,6 @@ Key: user.email
 Value: YourEmailHere
 ```
 
-## The journey: there we go to the (local) repository
-
-  * the next step: get the files/directory into the repo 
-  * with "git commit" the work is transferred (after git add or git add .)
-
-## Git commit - in detail (command line)
-
-  * git commit (commit all files from staging) 
-  * git commit -a (in addition all files that have been deleted or known (and have changed))
-  * git commit / git commit -a opens an editor where i can enter the commit message
-  * git commit -m "my commit-message" - makes committing a oneliner 
 
 ## Git commit (Eclipse/EGit) 
 
@@ -241,13 +208,7 @@ Value: YourEmailHere
   * You can access the log with 
     * git log 
 
-## Git log - what in detail ? (commandline) 
 
-  * Output the log: \\ git log 
-  * --
-  * a short version of logs: \\ git log --oneline 
-  * --
-  * all from a specific author: \\ git log --author=Max 
 
 ## Git log (Eclipse/EGit) 
 
@@ -257,34 +218,6 @@ or:
 Right Click -> Team -> Show In -> History 
 ```
 
-## Lab 6: Commit the changes and watch the log (commandline only) 
-
-```
-# look into the status
-git status
-
-git commit 
-# editor opens - now add a commit message 
-# & save & close the editor
-
-# everything shoud be clean now 
-git status
-
-# you will notice the same commit-id as 
-# in the commit message   
-git log 
-```
-
-## Git aliases (commandline) 
-
-  * With aliases you can create your own git commands ;o) 
-  * Creation Syntax:
-    * git config --global alias.name_of_alias "<git-command> <git-params>"
-    * e.g. git config --global alias.cc "commit -a"
-  * Usage Syntax:
-    * git cc 
-  * You can still add params to the command on usage:
-    * git cc -m "my commit" 
 
 ## Git log - beautified (commandline) 
 
