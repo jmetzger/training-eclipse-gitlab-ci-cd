@@ -28,6 +28,8 @@
      * [Setup Identity](/eclipse/setup-identity.md)
      * [Staging Area](/eclipse/staging-area.md)
      * [Log](/eclipse/log.md)
+     * [Commit](/eclipse/commit.md)
+     * [Add](/eclipse/add.md)
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
@@ -66,22 +68,10 @@
   1. Off-Topic 
      * [Alternatives jira/confluence](jira-confluence-alternatives.md)
 
-## The helper : git status
-
-  * Within egit implicitly in status of files (decorations) 
-  * Git Staging View   
 
 
 
-## The details : git add 
 
-  * Done within the Git Staging Area in EGit / Eclipse 
-
-```
-Right Click (Mouse) -> Team -> Commit
-or: 
-Windows -> Show View -> Other -> Git -> Git Staging 
-```
  
 ## Git and its objects  
 
