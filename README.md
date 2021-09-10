@@ -52,6 +52,7 @@
      * [Anderen Editor verwenden](/tipps-tricks/anderen-editor.md)
      * [Platz sparen mit dem shallow clone + neu pushen](/tipps-tricks/shallow-clone.md)
      * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](/tipps-tricks/branch-orphan.md)
+     * [Arbeiten mit git replace](https://git-scm.com/book/en/v2/Git-Tools-Replace)
 
   1. GIT-Guis
      * https://github.com/DmitryZhelnin/git-extensions-intellij
