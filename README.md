@@ -49,7 +49,7 @@
      * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
      * [Konfigurationseinstellung löschen](/tipps-tricks/config-loeschen.md)
      * [Anderen Editor verwenden](/tipps-tricks/anderen-editor.md)
-     * [Platz sparen mit dem shallow clone](/tipps-tricks/shallow-clone.md)
+     * [Platz sparen mit dem shallow clone + neu pushen](/tipps-tricks/shallow-clone.md)
 
   1. GIT-Guis
      * https://github.com/DmitryZhelnin/git-extensions-intellij
