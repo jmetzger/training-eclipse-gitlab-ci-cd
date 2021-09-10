@@ -142,19 +142,6 @@ blob
 
 
 
-## Git commit (Eclipse/EGit) 
-
-```
-1) Right Click on Project 
-2) Team -> Commit 
-```
-
-## Git log 
-
-  * All commits are logged in to the log 
-  * You can access the log with 
-    * git log 
-
 
 
 
@@ -259,11 +246,6 @@ git lg -1
     - only do rebasing in your own "local" branch (NO ! collaborative branches)
     - never rebase, after push is done and branch is shared with others ! 
 
-## Back in time -> reset (commandline) 
-
-  * e.g. git reset --hard HEAD~1
-  * attention: only use it, when changes are not published (remotely) yet.
-  * -> It is your command,  IN CASE your are telling yourself, omg, what's that, what did i do here, let me undo that
 
 ## Cancellation -> revert (commandline) 
 
