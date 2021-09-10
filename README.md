@@ -7,9 +7,6 @@
      * [How does it work?](/git-how-does-it-work.md)
      * [The flow of git](/git-the-flow.md)
 
-  1. Installation 
- 
-
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](add.md)
      * [git commit](commit.md)
@@ -30,6 +27,7 @@
      * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
      * [Setup Identity](/eclipse/setup-identity.md)
      * [Staging Area](/eclipse/staging-area.md)
+     * [Log](/eclipse/log.md)
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
@@ -158,14 +156,6 @@ blob
     * git log 
 
 
-
-## Git log (Eclipse/EGit) 
-
-```
-Right Click -> Show In -> History 
-or:
-Right Click -> Team -> Show In -> History 
-```
 
 
 ## Git log - beautified (commandline) 
