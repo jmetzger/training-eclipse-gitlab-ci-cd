@@ -31,6 +31,7 @@
      * [Log](/eclipse/log.md)
      * [Commit](/eclipse/commit.md)
      * [Add](/eclipse/add.md)
+     * [Edit markdown in eclipse with plugin](https://marketplace.eclipse.org/content/markdown-text-editor)
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
