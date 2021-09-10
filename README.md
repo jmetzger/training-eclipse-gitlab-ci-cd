@@ -20,6 +20,7 @@
      * [git tag](tag.md)
    
   1. Eclipse/STS(Spring Tool Suite) 
+     * [Increasing Icon Size](/tipps-tricks/icon-size.md)
      * [Installation of Eclipse](/installation/eclipse.md) 
      * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
@@ -45,11 +46,12 @@
      * [5-goldene-Regeln](5-goldene-regeln.md)
 
   1. Tipps & Tricks 
-     * [Increasing Icon Size](/tipps-tricks/icon-size.md)
+
      * [Prepare Perspective](/tipps-tricks/prepare-perspective.md)
      * [Konfigurationseinstellung löschen](/tipps-tricks/config-loeschen.md)
      * [Anderen Editor verwenden](/tipps-tricks/anderen-editor.md)
      * [Platz sparen mit dem shallow clone + neu pushen](/tipps-tricks/shallow-clone.md)
+     * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](/tipps-tricks/branch-orphan.md)
 
   1. GIT-Guis
      * https://github.com/DmitryZhelnin/git-extensions-intellij
