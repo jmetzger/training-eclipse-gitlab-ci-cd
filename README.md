@@ -26,7 +26,7 @@
   1. Actions/Infos - Eclipse  
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
      * [Eclipse Icons](/eclipse/icons.md)
-   
+     * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
@@ -48,6 +48,11 @@
      * [Anderen Editor verwenden](/tipps-tricks/anderen-editor.md)
      * [Platz sparen mit dem shallow clone](/tipps-tricks/shallow-clone.md)
 
+  1. GIT-Guis
+     * https://github.com/DmitryZhelnin/git-extensions-intellij
+     * https://github.com/gitextensions/gitextensions/
+     * https://git-fork.com/    
+
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
      * http://wiki.eclipse.org/EGit/User_Guide
@@ -59,41 +64,6 @@
 
   1. Off-Topic 
      * [Alternatives jira/confluence](jira-confluence-alternatives.md)
-
-
-
-
-
-## git commands in Eclipse (EGit)
-
-  * https://wiki.eclipse.org/EGit/Mapping_Git_Commands
-
-| git | eclipse/EGit |
-| --- | --- |
-|add: | "Add to Index" -> toolbar/menubar item to add all changes in selected files. <br> "Team -> Add to Index" to add all changes in selected files. <br> Drag-and-drop in "Git Staging" view <br>Drag-and-drop in "Synchronization" view. <br> "Compare With.." to stage or unstage line-by-line | 
-| annotate: | "Team -> Show in Annotations" |
-| branch:  | "Checkout"/"Switch To" <br>toolbar/menubar item to list, create, rename and delete local branches and remote-references. <br> toolbar of Commit views to create a branch from that commit right-click menu of commits listed in history |
-| checkout: | "Checkout"/"Switch To" toolbar/menubar item to checkout a local branch. <br> "Replace With..." to checkout a single file. <br> right-click menu of commits listed in history or reflog <br> right-click menu of branches in "Git Repositories" view toolbar of Commit views |
-| cherry-pick: | right-click menu of commits listed in history. toolbar of Commit views | 
-| clone: | toolbar of Git Repositories" view | 
-| commit: | "Commit" toolbar/menubar item "Team -> Commit" <br> "Commit" toolbar in "Git Staging" view |
-| config: | "Properties" view Preferences: "Team -> Git" "Team -> Remote -> Configure..." |
-| diff: | "Team -> Advanced -> Synchronize" to compare branches <br> "Team -> Synchronize Workspace" to compare working tree to HEAD <br> "Compare With" for specific files double-click items in either "Git Staging" changes windows |
-| fetch: | "Fetch changes from upstream" toolbar/menubar "Team -> Fetch changes from upstream" |
-| init: | toolbar of Git Repositories" |
-| log: | "Team -> Show in history" | 
-| merge: | "Team -> Merge" |
-| mv: | Implicit when file is renamed | 
-| pull: | "Pull" toolbar/menubar item "Team -> Pull" | 
-| push: | "Push to Upstream" toolbar/menubar item default push <br> "Team -> Push to Upstream" \\ ditto "Team -> Push..." for explicit push | 
-| rebase: | "Rebase" toolbar/menubar item "Team -> Rebase" | 
-| reflog: | "Git Reflog" view |
-| remote: | "Team -> Remote" "Branches -> Remote Tracking" in "Git Repositories" view | 
-| reset:  | "Reset" toolbar/menubar item to reset a branch "Team -> Reset" ditto | 
-| revert: | right-click menu of commits listed in history. | 
-| rm: | implicit when file is deleted |
-| status: | implicit in decorations, "Git Staging View" | 
-| tag: | "Team -> Advanced -> Tag...", annotated tags only toolbar of Commit views, ditto |
 
 ## The helper : git status
 
@@ -179,20 +149,6 @@ blob
 
 
 
-## Lab 5b: Set up your identity (Eclipse/EGit)
-
-  * http://wiki.eclipse.org/EGit/User_Guide#Identifying_yourself
-
-```
-Click Preferences > Team > Git > Configuration
-Click New Entry and enter the key value pairs:
-Key: user.name
-Value: YourUsernameHere
-
-And
-Key: user.email
-Value: YourEmailHere
-```
 
 
 ## Git commit (Eclipse/EGit) 
@@ -291,31 +247,9 @@ git lg
     * with -->
     * git merge your-feature-branch   
 
-## Delete branch (commandline)
 
-  * You should cleanup unused branches as frequent as possible 
-  * git branch -d feature-4711 (you should not be within the branch) 
 
-## Lab 9: Merge branch (fast-forward) - from other feature (commandline) 
 
-```
-# we did this before 
-# and worked on branch 
-git checkout feature-4711
-git checkout master 
-git merge feature-4711
-# you will notice, that both branches are at the same commit-id 
-git lg 
-git branch -d feature-4711 
-```
-
-## Merge - FastForward - How come ? 
-
-  * Fast-Forward just move the pointer forward
-  * HEAD always points to tip of the checked out branch
-  * HEAD is simply the entry in a file 
-    * Content is itsef a reference 
-    * Reference holds Commit-Id. 
 
 ## Lab 10: Exploring HEAD (commandline) 
 
@@ -370,34 +304,7 @@ git revert
   * data is saved outside of my system 
   * others can access it too (collaboration, e.g. on a feature)
 
-## Remote repository - examples 
 
-  * gitlab 
-  * github 
-  * gitosis 
-  * --
-  * under the hood: git. 
-
-## Login to gitlab / bitbucket 
-
-  * Introduction of the gui  
-
-## (Windows -> git bash) create private/public key pair ====
-
-  - desktop -> right click  -> git bash
-  - ssh-keygen -t rsa # set password ! 
-  - cd ../.ssh 
-  - cat id_rsa.pub # that's the public key 
-  - Mark key with mouse -> then -> CTRL + C 
-  - open gitlab in browser 
-  - (gitlab) menü -> profile settings -> SSH keys -> paste key and click button "Add Key" 
-  - Test the connection with ssh git@git.server.com 
-
-## Create a repo under gitlab/bitbucket ====
-
-  - login
-  - create repo (schulung) 
-  - introduce repo locally
 
 ## Publish the local changes remote 
 
@@ -482,7 +389,5 @@ Here are the most important settings for ssh.
 
 ## Git Guis 
   
-  * https://github.com/DmitryZhelnin/git-extensions-intellij
-  * https://github.com/gitextensions/gitextensions/
-  * https://git-fork.com/
+
   
