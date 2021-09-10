@@ -62,19 +62,6 @@
 
 
 
-## Starting with a project : 1 and 2
-
-  * You can also start with a project 
-    * e.g. New -> Java Project ->
-  * After that make i a git-repo 
-    * Team -> Share 
-      * Do **Not** Check: Use or create repository in parent folder  
-      * Use the seperated git folder here
-      * After doing that, all code will be moved to repo - folder
-        * and here in the workspace 
-          * Example Structure 
-            * ~/git/RepoName/ <- Workspace 
-            * ~/git/RepoName/.git
 
 
 ## git commands in Eclipse (EGit)
