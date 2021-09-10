@@ -27,6 +27,7 @@
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
      * [Eclipse Icons](/eclipse/icons.md)
      * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
+     * [Setup Identity](/eclipse/setup-identity.md)
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
@@ -70,17 +71,7 @@
   * Within egit implicitly in status of files (decorations) 
   * Git Staging View   
 
-## The staging area / index :
 
-  * <del>Here you will decide, what gets shipped (for the next "git commit")</del>
-  * <del>For doing so, we will use: git add</del>
-  * In Eclipse you will see this information in the staging area:
-
-```
-Right Click (Mouse) -> Team -> Commit
-or: 
-Windows -> Show View -> Other -> Git -> Git Staging  
-```
 
 ## The details : git add 
 
@@ -387,7 +378,7 @@ Here are the most important settings for ssh.
 
 {{ :gitflow-workflow-4.png|}}
 
-## Git Guis 
+
   
 
   
