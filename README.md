@@ -23,8 +23,9 @@
      * [git merge](merge.md)
      * [git tag](tag.md)
    
-  1. Actions - Eclipse  
-     * [Create/Initialize Repository](/eclipse/create-repo.md)
+  1. Actions/Infos - Eclipse  
+     * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
+     * [Eclipse Icons](/eclipse/icons.md)
    
    
   1. Advanced Commands 
@@ -75,10 +76,6 @@
             * ~/git/RepoName/ <- Workspace 
             * ~/git/RepoName/.git
 
-
-## Icons within EGit
-
-<img src="/images/symbols-egit.png" width="400">
 
 ## git commands in Eclipse (EGit)
 
