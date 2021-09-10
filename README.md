@@ -8,8 +8,7 @@
      * [The flow of git](/git-the-flow.md)
 
   1. Installation 
-     * [Installation of Eclipse](/installation/eclipse.md) 
-     * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
+ 
 
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](add.md)
@@ -23,11 +22,14 @@
      * [git merge](merge.md)
      * [git tag](tag.md)
    
-  1. Actions/Infos - Eclipse  
+  1. Eclipse/STS(Spring Tool Suite) 
+     * [Installation of Eclipse](/installation/eclipse.md) 
+     * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
      * [Eclipse Icons](/eclipse/icons.md)
      * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
      * [Setup Identity](/eclipse/setup-identity.md)
+     * [Staging Area](/eclipse/staging-area.md)
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
