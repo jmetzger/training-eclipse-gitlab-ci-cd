@@ -11,7 +11,7 @@
      * [Installation of Eclipse](/installation/eclipse.md) 
      * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
 
-  1. Commands (with tipps & tricks) 
+  1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](add.md)
      * [git commit](commit.md)
      * [git log](log.md)
@@ -22,6 +22,10 @@
      * [git checkout](checkout.md)
      * [git merge](merge.md)
      * [git tag](tag.md)
+   
+  1. Actions - Eclipse  
+     * [Create/Initialize Repository](/eclipse/create-repo.md)
+   
    
   1. Advanced Commands 
      * [git reflog](reflog.md) 
@@ -45,24 +49,16 @@
 
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+     * http://wiki.eclipse.org/EGit/User_Guide
+     * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
+     * https://git-scm.com/book/de/v2
+     * https://git-lfs.github.com/
+     * https://de.wikipedia.org/wiki/Liste_von_Git-GUIs
+     * https://git-scm.com/download/gui/windows
 
   1. Off-Topic 
      * [Alternatives jira/confluence](jira-confluence-alternatives.md)
 
-
-## The starting point (I) : the git-repository 
-
-  * <del>"git init" initializes a repository</del> 
-  * New Repo in eclipse 
-    * Go to Window -> Perspective -> Open Perspective -> Other -> Git 
-      * Use Icon 3 (from the left) of the git icons \\ (Create a new git repository and add it to this view)
-      * It suggests (the userdir)/git. Please add the name of your directory to your path (e.g. training) 
-      * Leave the box "create bare repository" UNCHECKED.
-      * Click "Finish"  
-    * Go to new Project -> Java Project (if you are using java)
-      * IMPORTANT: Uncheck "Use default location" (otherwice the repo will 
-  * after that: All the intelligence and logic is within the subdirectory .git
-  * this means: folders/files are fully functional, also if the .git - folder is deleted  
 
 
 ## Starting with a project : 1 and 2
@@ -573,12 +569,3 @@ Here are the most important settings for ssh.
   * https://github.com/gitextensions/gitextensions/
   * https://git-fork.com/
   
-## Documentation 
-
-  * http://wiki.eclipse.org/EGit/User_Guide
-  * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
-  * https://git-scm.com/book/de/v2
-  * https://git-lfs.github.com/
-  * https://de.wikipedia.org/wiki/Liste_von_Git-GUIs
-  * https://git-scm.com/download/gui/windows
-
