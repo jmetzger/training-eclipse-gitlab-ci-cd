@@ -1,5 +1,11 @@
 # git branch
 
+## Show all branch and active branch 
+
+```
+git branch 
+```
+
 ## Create branch based on commit (also past commit) 
 
 ```
