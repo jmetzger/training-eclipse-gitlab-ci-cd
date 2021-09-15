@@ -24,6 +24,7 @@
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
      * [Installation of Eclipse](/installation/eclipse.md) 
      * [Installation of STS (Spring Tool Suite)](/installation/sts.md)
+     * [Prepare Perspective for good user experience](/tipps-tricks/prepare-perspective.md)
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
      * [Eclipse Icons](/eclipse/icons.md)
      * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
