@@ -62,7 +62,10 @@
   1. GIT-Guis
      * https://github.com/DmitryZhelnin/git-extensions-intellij
      * https://github.com/gitextensions/gitextensions/
-     * https://git-fork.com/    
+     * https://git-fork.com/  
+
+  1. Exercises 
+     * [Create simple conflict on commandline](/exercises/conflict-commandline.md) 
 
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
