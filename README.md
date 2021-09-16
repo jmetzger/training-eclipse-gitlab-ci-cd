@@ -19,6 +19,7 @@
      * [git checkout](checkout.md)
      * [git merge](merge.md)
      * [git tag](tag.md)
+     * [git remote -v](remote.md)
    
   1. Eclipse/STS(Spring Tool Suite) 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
