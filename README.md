@@ -69,6 +69,7 @@
 
   1. Exercises 
      * [Create simple conflict on commandline](/exercises/conflict-commandline.md) 
+     * [Conflict merge-request](/exercises/conflict-merge-request.md)
 
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
