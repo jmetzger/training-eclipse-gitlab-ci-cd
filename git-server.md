@@ -66,7 +66,7 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 
 ## Welchen nehme ich  (Vergleich bitbucket / gitlab) 
 
-  * https://github.com/jmetzger/mariadb-fuer-entwickler.git
+  * https://www.atlassian.com/de/software/bitbucket/comparison/bitbucket-vs-gitlab
 
 ## Welchen nehme ich (Vergleich bitbucket / github) 
 
