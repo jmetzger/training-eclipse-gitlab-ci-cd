@@ -1,5 +1,11 @@
 # Mergetools 
 
+## Welche Tools sind auf dem System vorhanden 
+
+```
+git mergetool --tool-help
+```
+
 ## Meld (Windows) 
 
   *  https://meldmerge.org/
