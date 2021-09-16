@@ -55,7 +55,7 @@
      * [Platz sparen mit dem shallow clone + neu pushen](/tipps-tricks/shallow-clone.md)
      * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](/tipps-tricks/branch-orphan.md)
      * [Arbeiten mit git replace](https://git-scm.com/book/en/v2/Git-Tools-Replace)
-     * [ssl Verifizierung ausschalten (quick & dirty)](/tipps-tricks/sslverify.md)
+     * [ssl Verifizierung ausschalten (quick & dirty)](/tipps-tricks/ssl-verify.md)
   
   1. GIT Mergetools 
      * [git mergetools](/mergetools.md) 
