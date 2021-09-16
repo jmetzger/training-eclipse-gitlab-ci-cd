@@ -10,7 +10,7 @@ git mergetool --tool-help
 
   *  https://meldmerge.org/
 
-## Configuration in Git for Windwos (git bash) 
+## Meld - Configuration in Git for Windwos (git bash) 
 
 ```
 # you have to be in a git project 
@@ -21,6 +21,15 @@ git config --global mergetool.meld.path “/c/Users/Admin/AppData/Local/Programs
 # do not create an .orig - file before merge 
 git config --global mergetool.keepBackup false
 ```  
+
+## TortoiseGitMerge - Configuration 
+
+``` 
+# If you have tortoisegit installed on your system, you can use tortoisegitmerge for git for windows as well
+# Do not keep orig-file 
+git config --global merge.tool tortoisegit 
+git config --global mergetool.keepBackup false
+```
 
 ## How to use it 
 
