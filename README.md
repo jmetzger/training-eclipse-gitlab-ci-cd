@@ -61,6 +61,7 @@
      * [git mergetools](/mergetools.md) 
 
   1. GIT-Guis
+     * https://git-scm.com/download/gui/windows 
      * https://github.com/DmitryZhelnin/git-extensions-intellij
      * https://github.com/gitextensions/gitextensions/
      * https://git-fork.com/  
