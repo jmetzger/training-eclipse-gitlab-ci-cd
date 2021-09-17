@@ -7,6 +7,7 @@
      * [How does it work?](/git-how-does-it-work.md)
      * [The flow of git](/git-the-flow.md)
      * [Git and its objects](/git-objects.md) 
+     * [5-goldene-Regeln - Zerstörung](/5-goldene-regeln.md)
 
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](add.md)
