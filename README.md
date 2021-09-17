@@ -43,6 +43,7 @@
 
   1. Features 
      * [Partial Clone](partial-clone.md) 
+     * [Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
   1. GIT-Server 
      * [GIT Server](git-server.md) 
