@@ -12,7 +12,7 @@ und Zeile 1 , Zeile4, Zeile 8 etwas reinschreiben
 3. add + commit 
 4. git push -u origin feature/7001
 5.. merge-request 
--> feature/6000 -> master
+-> feature/7001 -> master
 6.. ihr versucht zu mergen
 
 ```
