@@ -6,6 +6,8 @@
      * [Projects with git](#projects-with-git)
      * [How does it work?](#how-does-it-work)
      * [The flow of git](#the-flow-of-git)
+     * [Git and its objects](#git-and-its-objects)
+     * [5-goldene-Regeln - Zerstörung](#5-goldene-regeln---zerstörung)
 
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](#git-add-+-tipps-&-tricks)
@@ -18,11 +20,13 @@
      * [git checkout](#git-checkout)
      * [git merge](#git-merge)
      * [git tag](#git-tag)
+     * [git remote -v](#git-remote--v)
    
   1. Eclipse/STS(Spring Tool Suite) 
      * [Increasing Icon Size](#increasing-icon-size)
      * [Installation of Eclipse](#installation-of-eclipse)
      * [Installation of STS (Spring Tool Suite)](#installation-of-sts-spring-tool-suite)
+     * [Prepare Perspective for good user experience](#prepare-perspective-for-good-user-experience)
      * [Create/Initialize Repository/Project](#createinitialize-repositoryproject)
      * [Eclipse Icons](#eclipse-icons)
      * [Git-Commands in eGit](#git-commands-in-egit)
@@ -39,6 +43,7 @@
 
   1. Features 
      * [Partial Clone](#partial-clone)
+     * [Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 
   1. GIT-Server 
      * [GIT Server](#git-server)
@@ -46,19 +51,27 @@
   1. Golden 
      * [5-goldene-Regeln](#5-goldene-regeln)
 
-  1. Tipps & Tricks 
+  1. Tipps & Tricks (git / git bash)
 
-     * [Prepare Perspective](#prepare-perspective)
      * [Konfigurationseinstellung löschen](#konfigurationseinstellung-löschen)
      * [Anderen Editor verwenden](#anderen-editor-verwenden)
      * [Platz sparen mit dem shallow clone + neu pushen](#platz-sparen-mit-dem-shallow-clone-+-neu-pushen)
      * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](#branch-aus-bestehendem-branch-neu-erstellen-alles-auf-anfang!)
      * [Arbeiten mit git replace](https://git-scm.com/book/en/v2/Git-Tools-Replace)
+     * [ssl Verifizierung ausschalten (quick & dirty)](#ssl-verifizierung-ausschalten-quick-&-dirty)
+  
+  1. GIT Mergetools 
+     * [git mergetools](#git-mergetools)
 
   1. GIT-Guis
+     * https://git-scm.com/download/gui/windows 
      * https://github.com/DmitryZhelnin/git-extensions-intellij
      * https://github.com/gitextensions/gitextensions/
-     * https://git-fork.com/    
+     * https://git-fork.com/  
+
+  1. Exercises 
+     * [Create simple conflict on commandline](#create-simple-conflict-on-commandline)
+     * [Conflict merge-request](#conflict-merge-request)
 
   1. Documentation 
      * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
@@ -77,15 +90,6 @@
 
 
  
-## Git and its objects  
-
-  * To manage its data, git uses objects
-  * e.g. when you add a file with git add filename \\ a new object is created 
-  * There are 4 types of objects
-    * blobs
-    * trees
-    * commits
-    * tags
 
 ## SHA1 - checksums & backgrounds 
 
@@ -383,6 +387,41 @@ Here are the most important settings for ssh.
 
 <div class="page-break"></div>
 
+### Git and its objects
+
+
+## Git and its objects  
+
+  * To manage its data, git uses objects
+  * e.g. when you add a file with git add filename \\ a new object is created 
+  * There are 4 types of objects
+    * blobs
+    * trees
+    * commits
+    * tags
+
+<div class="page-break"></div>
+
+### 5-goldene-Regeln - Zerstörung
+
+
+```
+1. Kein git commit --amend auf bereits veröffentlicht (gepushed) commit.
+
+2. Kein git reset vor bereits veröffentlichte (gepushed) commits 
+(1234 (HEAD -letzter Commit) < 5412 (vö - HEAD~1 - vorletzte Commit ) -> kein reset auf 1234) 
+
+(3. Nie Struktur in 2 Branches (z.B. Master / Feature-Branch) vor Merge gleichzeitig ändern)
+
+4. Mach niemals ein git push --force (JM sagt) 
+
+5. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
+- ausser Feature-Branch kann online gelöscht und nochmal erstellt werden 
+
+```
+
+<div class="page-break"></div>
+
 ## Commands - Commandline (with tipps & tricks) 
 
 ### git add + Tipps & Tricks
@@ -512,6 +551,17 @@ git pull
 ### git branch
 
 
+### Show branches
+
+```
+## locale branches + active branch (mit *)
+git branch 
+## remote branches
+git branch -r 
+## alle branches
+git branch -a 
+```
+
 ### Create branch based on commit (also past commit) 
 
 ```
@@ -591,6 +641,24 @@ git checkout tags/v0.1
 
 <div class="page-break"></div>
 
+### git remote -v
+
+
+### Examples
+
+```
+## show configured remotes 
+git remote -v 
+
+## configure origin remote 
+## if it works -> no output 
+git remote add origin https://myurl.to/repo.git
+
+```
+
+
+<div class="page-break"></div>
+
 ## Eclipse/STS(Spring Tool Suite) 
 
 ### Increasing Icon Size
@@ -637,6 +705,34 @@ start eclipse installer
 ## in our case for mac 
 https://download.springsource.com/release/STS4/4.10.0.RELEASE/dist/e4.19/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-macosx.cocoa.x86_64.dmg
 ```
+
+<div class="page-break"></div>
+
+### Prepare Perspective for good user experience
+
+ 
+  * It is important to have the right perspective/view
+
+### Walkthrough 
+
+```
+Todo 1: 
+Menu -> Window -> Show View -> Other -> Git -> Git Repositories 
+
+Todo 2:
+Menu -> Window -> Show View -> Other -> Git -> Git Staging 
+
+Todo 3:
+Menu -> Window -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
+Tab -> Menu Visibility -> Activate Git Checkbox (if not checked) 
+Tab -> Toolbar Visibility -> Activate Git Checkbox (if not checked) 
+
+Todo 4: Save perspective for further usage 
+Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace 
+
+
+```
+ 
 
 <div class="page-break"></div>
 
@@ -858,6 +954,10 @@ git checkout master
 
 <div class="page-break"></div>
 
+### Hooks
+
+  * https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks
+
 ## GIT-Server 
 
 ### GIT Server
@@ -898,7 +998,7 @@ https://github.com/organizations/enterprise_plan?ref_cta=Start+a+free+trial&ref_
 ```
 bitbucket cloud - damit arbeiten wir
 bitbucket server - lokale Installation (wird es nach 2021 nicht geben, bis ma 2024) 
-bitbucket data server 
+bitbucket data center
 
 ```
 
@@ -929,7 +1029,7 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 
 ### Welchen nehme ich  (Vergleich bitbucket / gitlab) 
 
-  * https://github.com/jmetzger/mariadb-fuer-entwickler.git
+  * https://www.atlassian.com/de/software/bitbucket/comparison/bitbucket-vs-gitlab
 
 ### Welchen nehme ich (Vergleich bitbucket / github) 
 
@@ -949,7 +1049,7 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 1. Kein git commit --amend auf bereits veröffentlicht (gepushed) commit.
 
 2. Kein git reset vor bereits veröffentlichte (gepushed) commits 
-(1234 < 5412 (vö) -> kein reset auf 1234) 
+(1234 (HEAD -letzter Commit) < 5412 (vö - HEAD~1 - vorletzte Commit ) -> kein reset auf 1234) 
 
 (3. Nie Struktur in 2 Branches (z.B. Master / Feature-Branch) vor Merge gleichzeitig ändern)
 
@@ -962,35 +1062,7 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 
 <div class="page-break"></div>
 
-## Tipps & Tricks 
-
-### Prepare Perspective
-
- 
-  * It is important to have the right perspective/view
-
-### Walkthrough 
-
-```
-Todo 1: 
-Menu -> Window -> Show View -> Other -> Git -> Git Repositories 
-
-Todo 2:
-Menu -> Window -> Show View -> Other -> Git -> Git Staging 
-
-Todo 3:
-Menu -> Window -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
-Tab -> Menu Visibility -> Activate Git Checkbox (if not checked) 
-Tab -> Toolbar Visibility -> Activate Git Checkbox (if not checked) 
-
-Todo 4: Save perspective for further usage 
-Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace 
-
-
-```
- 
-
-<div class="page-break"></div>
+## Tipps & Tricks (git / git bash)
 
 ### Konfigurationseinstellung löschen
 
@@ -1080,7 +1152,106 @@ git checkout main
 
   * https://git-scm.com/book/en/v2/Git-Tools-Replace
 
+### ssl Verifizierung ausschalten (quick & dirty)
+
+
+```
+## Wenn eine Fehler auftritt, wie z.B. beim Pushen 
+fatal: unable to access 'https://bitbucket.org/xy/xyz.git/': SSL certificate problem: unable to get local issuer certificate
+
+git config http.sslVerify false
+
+oder: für alle repos
+git config --global http.sslVerify false
+```
+
+<div class="page-break"></div>
+
+## GIT Mergetools 
+
+### git mergetools
+
+
+### Welche Tools sind auf dem System vorhanden 
+
+```
+git mergetool --tool-help
+```
+
+### Meld (Windows) 
+
+  *  https://meldmerge.org/
+
+### Meld - Configuration in Git for Windwos (git bash) 
+
+```
+## you have to be in a git project 
+git config --global merge.tool meld
+git config --global diff.tool meld
+## Should be on Windows 10 
+git config --global mergetool.meld.path “/c/Users/Admin/AppData/Local/Programs/Meld/Meld.exe”
+## do not create an .orig - file before merge 
+git config --global mergetool.keepBackup false
+```  
+
+### TortoiseGitMerge - Configuration 
+
+``` 
+## If you have tortoisegit installed on your system, you can use tortoisegitmerge for git for windows as well
+## Do not keep orig-file 
+git config --global merge.tool tortoisegit 
+git config --global mergetool.keepBackup false
+```
+
+### How to use it 
+
+```
+## when you have conflict you can open the mergetool (graphical tool with )
+git mergetool
+```
+
+<div class="page-break"></div>
+
 ## GIT-Guis
+
+## Exercises 
+
+### Create simple conflict on commandline
+
+
+```
+## if todo.txt does not exist, create it after creating new branch 
+1. neuen branch: feature/4920 - todo.txt Zeile 1 und Zeile4 
+2. add + commit
+3. git checkout master 
+4. in master -> todo.txt zeile 1 und zeile 4 ändern
+5. add + commit
+6. git merge feature/4920
+```
+
+<div class="page-break"></div>
+
+### Conflict merge-request
+
+
+```
+Schritt 1:
+Online die Datei src/README.txt im master 
+-> ändern Zeile 1, Zeile 4, Zeile 8 (wenn nicht vorhanden anlegen) -> im master
+
+Schritt2:
+1. lokal neuen Branch feature/7001 erstellen und checkout 
+2. im branch src/README.txt anlegen (wenn nicht vorhanden) 
+und Zeile 1 , Zeile4, Zeile 8 etwas reinschreiben
+3. add + commit 
+4. git push -u origin feature/7001
+5.. merge-request 
+-> feature/7001 -> master
+6.. ihr versucht zu mergen
+
+```
+
+<div class="page-break"></div>
 
 ## Documentation 
 
