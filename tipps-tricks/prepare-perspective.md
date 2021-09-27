@@ -12,7 +12,7 @@ Todo 2:
 Menu -> Window -> Show View -> Other -> Git -> Git Staging 
 
 Todo 3:
-Menu -> Window -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
+Menu -> Window -> Perspective -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
 Tab -> Menu Visibility -> Activate Git Checkbox (if not checked) 
 Tab -> Toolbar Visibility -> Activate Git Checkbox (if not checked) 
 
