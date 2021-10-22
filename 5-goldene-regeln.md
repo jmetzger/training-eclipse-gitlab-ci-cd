@@ -13,4 +13,7 @@
 5. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
 - ausser Feature-Branch kann online gelöscht und nochmal erstellt werden 
 
+Ausnahme (Brechen der Regeln): ich veröffentliche einen branch auf dem NUR ICH arbeite.
+
+
 ```
