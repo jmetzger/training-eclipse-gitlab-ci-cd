@@ -9,7 +9,7 @@
      * [Git and its objects](/git-objects.md) 
      * [5-goldene-Regeln - Zerstörung](/5-goldene-regeln.md)
 
- 2. Eclipse (Basics)
+ 1. Eclipse (Basics)
      * [Prepare Perspective for good user experience](/tipps-tricks/prepare-perspective.md)
      * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
      * [Eclipse Icons](/eclipse/icons.md)
@@ -20,7 +20,9 @@
      * [Commit](/eclipse/commit.md)
      * [Add](/eclipse/add.md)
 
-
+ 1. Documentation 
+     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+     * http://wiki.eclipse.org/EGit/User_Guide
 
 ## Backlog 
 
