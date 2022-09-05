@@ -2,6 +2,28 @@
 
 ## Agenda 
 
+ 1. Technical Background 
+     * [Projects with git](/projects-with-git.md)
+     * [How does it work?](/git-how-does-it-work.md)
+     * [The flow of git](/git-the-flow.md)
+     * [Git and its objects](/git-objects.md) 
+     * [5-goldene-Regeln - Zerstörung](/5-goldene-regeln.md)
+
+ 2. Eclipse (Basics)
+     * [Prepare Perspective for good user experience](/tipps-tricks/prepare-perspective.md)
+     * [Create/Initialize Repository/Project](/eclipse/create-repo.md)
+     * [Eclipse Icons](/eclipse/icons.md)
+     * [Git-Commands in eGit](/eclipse/git-commands-in-egit.md) 
+     * [Setup Identity](/eclipse/setup-identity.md)
+     * [Staging Area](/eclipse/staging-area.md)
+     * [Log](/eclipse/log.md)
+     * [Commit](/eclipse/commit.md)
+     * [Add](/eclipse/add.md)
+
+
+
+## Backlog 
+
   1. Technical Background 
      * [Projects with git](/projects-with-git.md)
      * [How does it work?](/git-how-does-it-work.md)
