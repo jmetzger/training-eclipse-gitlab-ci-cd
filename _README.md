@@ -2,17 +2,29 @@
 
 
 ## Agenda
-  1. Technical Background 
+ 1. Technical Background 
      * [Projects with git](#projects-with-git)
      * [How does it work?](#how-does-it-work)
      * [The flow of git](#the-flow-of-git)
      * [Git and its objects](#git-and-its-objects)
      * [5-goldene-Regeln - Zerstörung](#5-goldene-regeln---zerstörung)
 
+ 1. Eclipse (Basics)
+     * [Prepare Perspective for good user experience](#prepare-perspective-for-good-user-experience)
+     * [Create/Initialize Repository/Project](#createinitialize-repositoryproject)
+     * [Eclipse Icons](#eclipse-icons)
+     * [Git-Commands in eGit](#git-commands-in-egit)
+     * [Setup Identity](#setup-identity)
+     * [Staging Area](#staging-area)
+     * [Log](#log)
+     * [Commit](#commit)
+     * [Add](#add)
+     
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](#git-add-+-tipps-&-tricks)
      * [git commit](#git-commit)
      * [git log](#git-log)
+     * [Beautify Logs](#beautify-logs)
      * [git config](#git-config)
      * [git show](#git-show)
      * [Needed commands for starters](#needed-commands-for-starters)
@@ -21,6 +33,21 @@
      * [git merge](#git-merge)
      * [git tag](#git-tag)
      * [git remote -v](#git-remote--v)
+   
+ 1. Advanced Commands 
+     * [git reflog](#git-reflog)
+     * [git reset - Back in Time](#git-reset---back-in-time)
+ 
+ 1. GIT Mergetools 
+     * [git mergetools](#git-mergetools)
+ 
+ 1. Documentation 
+     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+     * http://wiki.eclipse.org/EGit/User_Guide
+     * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+     * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
+## Backlog 
    
   1. Eclipse/STS(Spring Tool Suite) 
      * [Increasing Icon Size](#increasing-icon-size)
@@ -36,11 +63,7 @@
      * [Commit](#commit)
      * [Add](#add)
      * [Edit markdown in eclipse with plugin](https://marketplace.eclipse.org/content/markdown-text-editor)
-   
-  1. Advanced Commands 
-     * [git reflog](#git-reflog)
-     * [git reset - Back in Time](#git-reset---back-in-time)
-
+ 
   1. Features 
      * [Partial Clone](#partial-clone)
      * [Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
@@ -59,9 +82,9 @@
      * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](#branch-aus-bestehendem-branch-neu-erstellen-alles-auf-anfang!)
      * [Arbeiten mit git replace](https://git-scm.com/book/en/v2/Git-Tools-Replace)
      * [ssl Verifizierung ausschalten (quick & dirty)](#ssl-verifizierung-ausschalten-quick-&-dirty)
+     * [generic no-ff](#generic-no-ff)
   
-  1. GIT Mergetools 
-     * [git mergetools](#git-mergetools)
+  
 
   1. GIT-Guis
      * https://git-scm.com/download/gui/windows 
@@ -357,8 +380,6 @@ Here are the most important settings for ssh.
 
 <div class="page-break"></div>
 
-## Technical Background 
-
 ### Projects with git
 
 
@@ -366,8 +387,6 @@ Here are the most important settings for ssh.
   * github
   * ruby on rails
   * phpmyadmin
-
-<div class="page-break"></div>
 
 ### How does it work?
 
@@ -377,15 +396,11 @@ Here are the most important settings for ssh.
     * (git saves the complete project including all versions)
   * all files are saved in objects.  
 
-<div class="page-break"></div>
-
 ### The flow of git
 
 
 ![Git - The flow](/images/funktionsweise-git.png?650)
 
-
-<div class="page-break"></div>
 
 ### Git and its objects
 
@@ -400,8 +415,6 @@ Here are the most important settings for ssh.
     * commits
     * tags
 
-<div class="page-break"></div>
-
 ### 5-goldene-Regeln - Zerstörung
 
 
@@ -409,18 +422,175 @@ Here are the most important settings for ssh.
 1. Kein git commit --amend auf bereits veröffentlicht (gepushed) commit.
 
 2. Kein git reset vor bereits veröffentlichte (gepushed) commits 
-(1234 (HEAD -letzter Commit) < 5412 (vö - HEAD~1 - vorletzte Commit ) -> kein reset auf 1234) 
+(1234 (HEAD~1 -vorletzter Commit) < 5412 (vö - HEAD - letzter Commit ) -> kein reset auf 1234) 
 
-(3. Nie Struktur in 2 Branches (z.B. Master / Feature-Branch) vor Merge gleichzeitig ändern)
+3. Mach niemals ein git push --force (JM sagt) 
 
-4. Mach niemals ein git push --force (JM sagt) 
-
-5. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
+4. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
 - ausser Feature-Branch kann online gelöscht und nochmal erstellt werden 
+
+Ausnahme (Brechen der Regeln): ich veröffentliche einen branch auf dem NUR ICH arbeite.
+
 
 ```
 
-<div class="page-break"></div>
+### Prepare Perspective for good user experience
+
+ 
+  * It is important to have the right perspective/view
+
+### Walkthrough 
+
+```
+Todo 1: 
+Menu -> Window -> Show View -> Other -> Git -> Git Repositories 
+
+Todo 2:
+Menu -> Window -> Show View -> Other -> Git -> Git Staging 
+
+Todo 3:
+Menu -> Window -> Perspective -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
+Tab -> Menu Visibility -> Activate Git Checkbox (if not checked) 
+Tab -> Toolbar Visibility -> Activate Git Checkbox (if not checked) 
+
+Todo 4: Save perspective for further usage 
+Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace 
+
+
+```
+ 
+
+### Create/Initialize Repository/Project
+
+
+### Starting with a repo 
+
+  * New Repo in eclipse 
+    * Go to Window -> Perspective -> Open Perspective -> Other -> Git 
+      * Use Icon 3 (from the left) of the git icons \\ (Create a new git repository and add it to this view)
+      * It suggests (the userdir)/git. Please add the name of your directory to your path (e.g. training) 
+      * Leave the box "create bare repository" UNCHECKED.
+      * Click "Finish"  
+    * Go to new Project -> Java Project (if you are using java)
+      * IMPORTANT: Uncheck "Use default location" (otherwice the repo will 
+  * after that: All the intelligence and logic is within the subdirectory .git
+  * this means: folders/files are fully functional, also if the .git - folder is deleted  
+
+### Alternative: Starting with a project (recommended !)
+
+  * You can also start with a project 
+    * e.g. New -> Java Project ->
+  * After that make i a git-repo 
+    * Team -> Share 
+      * Do **Not** Check: Use or create repository in parent folder  
+      * Use the seperated git folder here
+      * After doing that, all code will be moved to repo - folder
+        * and here in the workspace 
+          * Example Structure 
+            * ~/git/RepoName/ <- Workspace 
+            * ~/git/RepoName/.git
+
+### Eclipse Icons
+
+
+<img src="/images/symbols-egit.png" width="400">
+
+### Git-Commands in eGit
+
+
+  * https://wiki.eclipse.org/EGit/Mapping_Git_Commands
+
+| git | eclipse/EGit |
+| --- | --- |
+|add: | "Add to Index" -> toolbar/menubar item to add all changes in selected files. <br> "Team -> Add to Index" to add all changes in selected files. <br> Drag-and-drop in "Git Staging" view <br>Drag-and-drop in "Synchronization" view. <br> "Compare With.." to stage or unstage line-by-line | 
+| annotate: | "Team -> Show in Annotations" |
+| branch:  | "Checkout"/"Switch To" <br>toolbar/menubar item to list, create, rename and delete local branches and remote-references. <br> toolbar of Commit views to create a branch from that commit right-click menu of commits listed in history |
+| checkout: | "Checkout"/"Switch To" toolbar/menubar item to checkout a local branch. <br> "Replace With..." to checkout a single file. <br> right-click menu of commits listed in history or reflog <br> right-click menu of branches in "Git Repositories" view toolbar of Commit views |
+| cherry-pick: | right-click menu of commits listed in history. toolbar of Commit views | 
+| clone: | toolbar of Git Repositories" view | 
+| commit: | "Commit" toolbar/menubar item "Team -> Commit" <br> "Commit" toolbar in "Git Staging" view |
+| config: | "Properties" view Preferences: "Team -> Git" "Team -> Remote -> Configure..." |
+| diff: | "Team -> Advanced -> Synchronize" to compare branches <br> "Team -> Synchronize Workspace" to compare working tree to HEAD <br> "Compare With" for specific files double-click items in either "Git Staging" changes windows |
+| fetch: | "Fetch changes from upstream" toolbar/menubar "Team -> Fetch changes from upstream" |
+| init: | toolbar of Git Repositories" |
+| log: | "Team -> Show in history" | 
+| merge: | "Team -> Merge" |
+| mv: | Implicit when file is renamed | 
+| pull: | "Pull" toolbar/menubar item "Team -> Pull" | 
+| push: | "Push to Upstream" toolbar/menubar item default push <br> "Team -> Push to Upstream" \\ ditto "Team -> Push..." for explicit push | 
+| rebase: | "Rebase" toolbar/menubar item "Team -> Rebase" | 
+| reflog: | "Git Reflog" view |
+| remote: | "Team -> Remote" "Branches -> Remote Tracking" in "Git Repositories" view | 
+| reset:  | "Reset" toolbar/menubar item to reset a branch "Team -> Reset" ditto | 
+| revert: | right-click menu of commits listed in history. | 
+| rm: | implicit when file is deleted |
+| status: | implicit in decorations, "Git Staging View" | 
+| tag: | "Team -> Advanced -> Tag...", annotated tags only toolbar of Commit views, ditto |
+
+### Setup Identity
+
+
+  * http://wiki.eclipse.org/EGit/User_Guide#Identifying_yourself
+
+```
+Click Preferences > Team > Git > Configuration
+Click New Entry and enter the key value pairs:
+Key: user.name
+Value: YourUsernameHere
+
+And
+Key: user.email
+Value: YourEmailHere
+```
+
+### Staging Area
+
+
+  * In Eclipse you will see this information in the staging area:
+    * New / Modified files (git status)   
+
+```
+Right Click (Mouse) -> Team -> Commit
+or: 
+Windows -> Show View -> Other -> Git -> Git Staging  
+```
+
+### Log
+
+
+```
+Right Click -> Show In -> History 
+or:
+Right Click -> Team -> Show In -> History 
+```
+```
+Alternative: (Recommended) 
+
+-> Simply do it from the staging area
+```
+
+### Commit
+
+
+```
+1) Right Click on Project 
+2) Team -> Commit 
+
+## Alternative 
+## Do it directly in the staging area 
+
+```
+
+### Add
+
+
+  * Done within the Git Staging Area in EGit / Eclipse 
+
+```
+Right Click (Mouse) -> Team -> Commit
+or: 
+Windows -> Show View -> Other -> Git -> Git Staging 
+```
 
 ## Commands - Commandline (with tipps & tricks) 
 
@@ -439,8 +609,6 @@ git add .
 git add -A 
 ```
 
-<div class="page-break"></div>
-
 ### git commit
 
 
@@ -458,8 +626,6 @@ git add -A
 git commit --amend
 ## now you can change the description, but you will get a new commit-id 
 ```
-
-<div class="page-break"></div>
 
 ### git log
 
@@ -497,7 +663,22 @@ git log --oneline --reverse | head -1
 git config --global alias.sl '!git log --oneline -2 && git status'
 ```
 
-<div class="page-break"></div>
+### Beautify Logs
+
+
+### Walkthrough 
+
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset \
+-%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+
+```
+
+### PRETTY FORMATS
+
+  * all documented in git help log (section PRETTY FORMAT)
+  * https://git-scm.com/docs/git-log
+  
 
 ### git config
 
@@ -514,8 +695,6 @@ git config --unset --global alias.log
 ```
 
 
-<div class="page-break"></div>
-
 ### git show
 
 
@@ -526,8 +705,6 @@ git show <commit-ish>
 ## example with commit-id 
 git show 342a
 ```
-
-<div class="page-break"></div>
 
 ### Needed commands for starters
 
@@ -545,8 +722,6 @@ git push -u origin master
 git push 
 git pull 
 ```
-
-<div class="page-break"></div>
 
 ### git branch
 
@@ -575,8 +750,6 @@ git branch -d branchname # does not work in this case
 git branch -D branchname # <- is the solution 
 ```
 
-<div class="page-break"></div>
-
 ### git checkout
 
 
@@ -592,8 +765,6 @@ git checkout feature/4711
 ## Only possible once 
 git checkout -b feature/4712
 ```
-
-<div class="page-break"></div>
 
 ### git merge
 
@@ -618,8 +789,6 @@ git merge --no-ff feature/4711
 
 ```
 
-<div class="page-break"></div>
-
 ### git tag
 
 
@@ -639,8 +808,6 @@ git checkout tags/v0.1
 
 ```
 
-<div class="page-break"></div>
-
 ### git remote -v
 
 
@@ -657,7 +824,99 @@ git remote add origin https://myurl.to/repo.git
 ```
 
 
-<div class="page-break"></div>
+### git reflog
+
+
+### command
+
+  * show everything you (last 30 days), also stuff that is not visible in branch anymore 
+
+### Example 
+
+```
+git reflog 
+```
+
+### when many entries a pager like less (aka man less) will be used 
+
+```
+## you can get out of the page with pressing the key 'q' 
+
+```
+
+### git reset - Back in Time
+
+
+
+### Why ? 
+
+  * Back in time -> reset
+  * e.g. git reset –-hard e2d5  
+  * attention: only use it, when changes are not published (remotely) yet.
+  * → It is your command, IN CASE your are telling yourself, omg, what's that, what did i do here, let me undo that
+
+### Example 
+
+```
+git reset --hard 2343 
+```
+
+### git mergetools
+
+
+### Welche Tools sind auf dem System vorhanden 
+
+```
+git mergetool --tool-help
+```
+
+### Meld (Windows) 
+
+  *  https://meldmerge.org/
+
+### Meld - Configuration in Git for Windows (git bash) 
+
+```
+## you have to be in a git project 
+git config --global merge.tool meld
+git config --global diff.tool meld
+## Should be on Windows 10 
+git config --global mergetool.meld.path “/c/Users/Admin/AppData/Local/Programs/Meld/Meld.exe”
+## Windows 10 - different installation path 
+git config --replace-all --global mergetool.meld.path  '/c/Program files/Meld/Meld.exe'
+
+
+## do not create an .orig - file before merge 
+git config --global mergetool.keepBackup false
+```  
+
+### TortoiseGitMerge - Configuration 
+
+``` 
+## If you have tortoisegit installed on your system, you can use tortoisegitmerge for git for windows as well
+## Do not keep orig-file 
+git config --global merge.tool tortoisegit 
+git config --global mergetool.keepBackup false
+```
+
+### How to use it 
+
+```
+## when you have conflict you can open the mergetool (graphical tool with )
+git mergetool
+```
+
+### GIT pdf
+
+  * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
+
+### Conventional Commits
+
+  * https://www.conventionalcommits.org/en/v1.0.0/
+
+### Conventional Commits
+
+  * https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 
 ## Eclipse/STS(Spring Tool Suite) 
 
@@ -675,8 +934,6 @@ git remote add origin https://myurl.to/repo.git
 -Dswt.autoScale.method=nearest
 ```
 
-<div class="page-break"></div>
-
 ### Installation of Eclipse
 
 
@@ -692,8 +949,6 @@ start eclipse installer
 ## Eclipse will be installed 
 ```
 
-<div class="page-break"></div>
-
 ### Installation of STS (Spring Tool Suite)
 
 
@@ -705,8 +960,6 @@ start eclipse installer
 ## in our case for mac 
 https://download.springsource.com/release/STS4/4.10.0.RELEASE/dist/e4.19/spring-tool-suite-4-4.10.0.RELEASE-e4.19.0-macosx.cocoa.x86_64.dmg
 ```
-
-<div class="page-break"></div>
 
 ### Prepare Perspective for good user experience
 
@@ -723,7 +976,7 @@ Todo 2:
 Menu -> Window -> Show View -> Other -> Git -> Git Staging 
 
 Todo 3:
-Menu -> Window -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
+Menu -> Window -> Perspective -> Customize Perspective -> Action Set Availability -> Git && Apply & Close 
 Tab -> Menu Visibility -> Activate Git Checkbox (if not checked) 
 Tab -> Toolbar Visibility -> Activate Git Checkbox (if not checked) 
 
@@ -733,8 +986,6 @@ Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace
 
 ```
  
-
-<div class="page-break"></div>
 
 ### Create/Initialize Repository/Project
 
@@ -766,14 +1017,10 @@ Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace
             * ~/git/RepoName/ <- Workspace 
             * ~/git/RepoName/.git
 
-<div class="page-break"></div>
-
 ### Eclipse Icons
 
 
 <img src="/images/symbols-egit.png" width="400">
-
-<div class="page-break"></div>
 
 ### Git-Commands in eGit
 
@@ -807,8 +1054,6 @@ Menu -> Windows -> Save Perspective As -> e.g. GIT/Workspace
 | status: | implicit in decorations, "Git Staging View" | 
 | tag: | "Team -> Advanced -> Tag...", annotated tags only toolbar of Commit views, ditto |
 
-<div class="page-break"></div>
-
 ### Setup Identity
 
 
@@ -825,8 +1070,6 @@ Key: user.email
 Value: YourEmailHere
 ```
 
-<div class="page-break"></div>
-
 ### Staging Area
 
 
@@ -838,8 +1081,6 @@ Right Click (Mouse) -> Team -> Commit
 or: 
 Windows -> Show View -> Other -> Git -> Git Staging  
 ```
-
-<div class="page-break"></div>
 
 ### Log
 
@@ -855,8 +1096,6 @@ Alternative: (Recommended)
 -> Simply do it from the staging area
 ```
 
-<div class="page-break"></div>
-
 ### Commit
 
 
@@ -869,8 +1108,6 @@ Alternative: (Recommended)
 
 ```
 
-<div class="page-break"></div>
-
 ### Add
 
 
@@ -882,54 +1119,9 @@ or:
 Windows -> Show View -> Other -> Git -> Git Staging 
 ```
 
-<div class="page-break"></div>
-
 ### Edit markdown in eclipse with plugin
 
   * https://marketplace.eclipse.org/content/markdown-text-editor
-
-## Advanced Commands 
-
-### git reflog
-
-
-### command
-
-  * show everything you (last 30 days), also stuff that is not visible in branch anymore 
-
-### Example 
-
-```
-git reflog 
-```
-
-### when many entries a pager like less (aka man less) will be used 
-
-```
-## you can get out of the page with pressing the key 'q' 
-
-```
-
-<div class="page-break"></div>
-
-### git reset - Back in Time
-
-
-
-### Why ? 
-
-  * Back in time -> reset
-  * e.g. git reset –-hard e2d5  
-  * attention: only use it, when changes are not published (remotely) yet.
-  * → It is your command, IN CASE your are telling yourself, omg, what's that, what did i do here, let me undo that
-
-### Example 
-
-```
-git reset --hard 2343 
-```
-
-<div class="page-break"></div>
 
 ## Features 
 
@@ -951,8 +1143,6 @@ git clone --filter=blob:none
 git checkout master 
 ```
 
-
-<div class="page-break"></div>
 
 ### Hooks
 
@@ -1038,8 +1228,6 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 
 
 
-<div class="page-break"></div>
-
 ## Golden 
 
 ### 5-goldene-Regeln
@@ -1049,18 +1237,17 @@ https://gitea.io/en-us/ (codeberg basiert darauf)
 1. Kein git commit --amend auf bereits veröffentlicht (gepushed) commit.
 
 2. Kein git reset vor bereits veröffentlichte (gepushed) commits 
-(1234 (HEAD -letzter Commit) < 5412 (vö - HEAD~1 - vorletzte Commit ) -> kein reset auf 1234) 
+(1234 (HEAD~1 -vorletzter Commit) < 5412 (vö - HEAD - letzter Commit ) -> kein reset auf 1234) 
 
-(3. Nie Struktur in 2 Branches (z.B. Master / Feature-Branch) vor Merge gleichzeitig ändern)
+3. Mach niemals ein git push --force (JM sagt) 
 
-4. Mach niemals ein git push --force (JM sagt) 
-
-5. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
+4. Kein Rebase auf bereits veröffentlichte commits (nach vö von Feature branchen) 
 - ausser Feature-Branch kann online gelöscht und nochmal erstellt werden 
 
-```
+Ausnahme (Brechen der Regeln): ich veröffentliche einen branch auf dem NUR ICH arbeite.
 
-<div class="page-break"></div>
+
+```
 
 ## Tipps & Tricks (git / git bash)
 
@@ -1072,16 +1259,12 @@ git config --global --unset alias.lg
 
 ```
 
-<div class="page-break"></div>
-
 ### Anderen Editor verwenden
 
 
 ```
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 ```
-
-<div class="page-break"></div>
 
 ### Platz sparen mit dem shallow clone + neu pushen
 
@@ -1132,8 +1315,6 @@ git push origin main
 
 ```
 
-<div class="page-break"></div>
-
 ### Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)
 
 
@@ -1145,8 +1326,6 @@ git commit -am "New Initial release"
 git checkout main 
 
 ```
-
-<div class="page-break"></div>
 
 ### Arbeiten mit git replace
 
@@ -1165,52 +1344,16 @@ oder: für alle repos
 git config --global http.sslVerify false
 ```
 
-<div class="page-break"></div>
-
-## GIT Mergetools 
-
-### git mergetools
+### generic no-ff
 
 
-### Welche Tools sind auf dem System vorhanden 
+### Workaround 
 
 ```
-git mergetool --tool-help
-```
+ git config --global --add merge.ff false
 
-### Meld (Windows) 
-
-  *  https://meldmerge.org/
-
-### Meld - Configuration in Git for Windwos (git bash) 
 
 ```
-## you have to be in a git project 
-git config --global merge.tool meld
-git config --global diff.tool meld
-## Should be on Windows 10 
-git config --global mergetool.meld.path “/c/Users/Admin/AppData/Local/Programs/Meld/Meld.exe”
-## do not create an .orig - file before merge 
-git config --global mergetool.keepBackup false
-```  
-
-### TortoiseGitMerge - Configuration 
-
-``` 
-## If you have tortoisegit installed on your system, you can use tortoisegitmerge for git for windows as well
-## Do not keep orig-file 
-git config --global merge.tool tortoisegit 
-git config --global mergetool.keepBackup false
-```
-
-### How to use it 
-
-```
-## when you have conflict you can open the mergetool (graphical tool with )
-git mergetool
-```
-
-<div class="page-break"></div>
 
 ## GIT-Guis
 
@@ -1228,8 +1371,6 @@ git mergetool
 5. add + commit
 6. git merge feature/4920
 ```
-
-<div class="page-break"></div>
 
 ### Conflict merge-request
 
@@ -1250,8 +1391,6 @@ und Zeile 1 , Zeile4, Zeile 8 etwas reinschreiben
 6.. ihr versucht zu mergen
 
 ```
-
-<div class="page-break"></div>
 
 ## Documentation 
 
@@ -1289,5 +1428,3 @@ gitea
 dokuwiki 
 -> Migration 
 ```
-
-<div class="page-break"></div>
