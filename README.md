@@ -24,6 +24,7 @@
      * [git add + Tipps & Tricks](add.md)
      * [git commit](commit.md)
      * [git log](log.md)
+     * [Beautify Logs](beautify-log.md)
      * [git config](config.md) 
      * [git show](show.md)
      * [Needed commands for starters](started-commands.md)
