@@ -19,20 +19,7 @@
      * [Log](/eclipse/log.md)
      * [Commit](/eclipse/commit.md)
      * [Add](/eclipse/add.md)
-
- 1. Documentation 
-     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
-     * http://wiki.eclipse.org/EGit/User_Guide
-
-## Backlog 
-
-  1. Technical Background 
-     * [Projects with git](/projects-with-git.md)
-     * [How does it work?](/git-how-does-it-work.md)
-     * [The flow of git](/git-the-flow.md)
-     * [Git and its objects](/git-objects.md) 
-     * [5-goldene-Regeln - Zerstörung](/5-goldene-regeln.md)
-
+     
   1. Commands - Commandline (with tipps & tricks) 
      * [git add + Tipps & Tricks](add.md)
      * [git commit](commit.md)
@@ -45,6 +32,21 @@
      * [git merge](merge.md)
      * [git tag](tag.md)
      * [git remote -v](remote.md)
+   
+ 1. Advanced Commands 
+     * [git reflog](reflog.md) 
+     * [git reset - Back in Time](reset.md) 
+ 
+ 1. GIT Mergetools 
+     * [git mergetools](/mergetools.md) 
+ 
+ 1. Documentation 
+     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+     * http://wiki.eclipse.org/EGit/User_Guide
+     * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+     * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+
+## Backlog 
    
   1. Eclipse/STS(Spring Tool Suite) 
      * [Increasing Icon Size](/tipps-tricks/icon-size.md)
@@ -60,11 +62,7 @@
      * [Commit](/eclipse/commit.md)
      * [Add](/eclipse/add.md)
      * [Edit markdown in eclipse with plugin](https://marketplace.eclipse.org/content/markdown-text-editor)
-   
-  1. Advanced Commands 
-     * [git reflog](reflog.md) 
-     * [git reset - Back in Time](reset.md)  
-
+ 
   1. Features 
      * [Partial Clone](partial-clone.md) 
      * [Hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
@@ -85,8 +83,7 @@
      * [ssl Verifizierung ausschalten (quick & dirty)](/tipps-tricks/ssl-verify.md)
      * [generic no-ff](/tipps-tricks/generic-no-ff.md)
   
-  1. GIT Mergetools 
-     * [git mergetools](/mergetools.md) 
+  
 
   1. GIT-Guis
      * https://git-scm.com/download/gui/windows 
