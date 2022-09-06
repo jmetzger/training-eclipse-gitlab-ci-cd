@@ -10,7 +10,7 @@ git mergetool --tool-help
 
   *  https://meldmerge.org/
 
-## Meld - Configuration in Git for Windwos (git bash) 
+## Meld - Configuration in Git for Windows (git bash) 
 
 ```
 # you have to be in a git project 
@@ -18,6 +18,10 @@ git config --global merge.tool meld
 git config --global diff.tool meld
 # Should be on Windows 10 
 git config --global mergetool.meld.path “/c/Users/Admin/AppData/Local/Programs/Meld/Meld.exe”
+# Windows 10 - different installation path 
+git config --replace-all --global mergetool.meld.path  '/c/Program files/Meld/Meld.exe'
+
+
 # do not create an .orig - file before merge 
 git config --global mergetool.keepBackup false
 ```  
