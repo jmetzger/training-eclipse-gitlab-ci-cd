@@ -314,9 +314,7 @@ Here are the most important settings for ssh.
   * if not: export GIT_SSH="C:\Program Files\Git\usr\bin\ssh.exe" 
   * in addition in tortoisegit under settings -> network the should be the following: \\ C:\Program Files\Git\usr\bin\ssh.exe 
 
-## Workflows -> gitflow workflow 
 
-{{ :gitflow-workflow-4.png|}}
 
 
   
