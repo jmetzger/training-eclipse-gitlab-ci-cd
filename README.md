@@ -40,12 +40,20 @@
  
  1. GIT Mergetools 
      * [git mergetools](/mergetools.md) 
+  
+ 1. gitlab + CI/CD 
+
+
+
  
- 1. Documentation 
-     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
-     * http://wiki.eclipse.org/EGit/User_Guide
-     * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-     * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+ 1. Documentation (git)
+    * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+    * http://wiki.eclipse.org/EGit/User_Guide
+    * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+    * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+ 1. Documentation (gitlab)
+    * https://about.gitlab.com/blog/2020/12/10/basics-of-gitlab-ci-updated/
+ 
 
 ## Backlog 
    
