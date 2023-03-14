@@ -166,64 +166,9 @@ blob
 
 
 
-## Git log - beautified (commandline) 
 
-  * Why ? 
-    * For later usage, it will be easier to have a beautified log
 
-```
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-```
 
-## Lab 7: Setup beautified log (commandline) 
-
-```
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-# use beautified log 
-git lg 
-```
-
-## Branches -> why ? 
-
-  * important concept of git 
-  * work on features easily 
-  * independent from remote repository 
-
-## Create branches -> 1-step-version 
-
-  * git checkout -b feature-4711 
-
-## Branch - which one is active ? 
-
-  * git branch (star means active) 
-
-## change to another branch (commandline) 
-
-  * git checkout feature-4711 
-
-## Lab 8: Create a new branch + work there (commandline) 
-
-```
-git checkout -b feature-4711 
-# check which branch is active 
-git branch 
-
-# create a file feature-4711.txt 
-touch feature-4711.txt 
-# create a line of text into it 
-# with your favourite editor
-# .e.g 
-# Line of code in 4711 
-
-# now commit the changes 
-git status 
-git add .
-git commit -am "New feature-4711.txt" 
-git status
-# do you notice, that the branch is ahead ? 
-git lg 
-```
 
 ##  Merge changes -> merge 
 
