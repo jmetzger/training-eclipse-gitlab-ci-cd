@@ -11,6 +11,7 @@ show_env:
   scripts:
     - env 
     - pwd 
+    - ls -la
 
 
 ```
