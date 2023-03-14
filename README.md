@@ -44,6 +44,10 @@
     * [gitlab predefined vars](/gitlab/04-predefined-vars.md)
     * [rules](gitlab/05-rules.md) 
     * [image verwenden](gitlab/12-image.md)
+ 
+ 1. gitlab - code quality testing 
+    * [code quality](gitlab/13-code-quality.md)
+    
  1. Documentation (git)
     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
     * http://wiki.eclipse.org/EGit/User_Guide
