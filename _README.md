@@ -21,7 +21,7 @@
      * [Add](#add)
      
   1. Commands - Commandline (with tipps & tricks) 
-     * [git add + Tipps & Tricks](#git-add-+-tipps-&-tricks)
+     * [git add + Tipps & Tricks](#git-add-+-tipps--tricks)
      * [git commit](#git-commit)
      * [git log](#git-log)
      * [Beautify Logs](#beautify-logs)
@@ -33,20 +33,37 @@
      * [git merge](#git-merge)
      * [git tag](#git-tag)
      * [git remote -v](#git-remote--v)
-   
  1. Advanced Commands 
      * [git reflog](#git-reflog)
      * [git reset - Back in Time](#git-reset---back-in-time)
- 
  1. GIT Mergetools 
      * [git mergetools](#git-mergetools)
+ 1. gitlab + CI/CD 
+    * [gitlab ci/cd Überblick](/gitlab/01-ci-cd-overview.md)
+    * [gitlab stages](/gitlab/03-example-running-stages.md)
+    * [gitlab predefined vars](/gitlab/04-predefined-vars.md)
+    * [rules](gitlab/05-rules.md) 
+    * [image verwenden](gitlab/12-image.md)
  
- 1. Documentation 
-     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
-     * http://wiki.eclipse.org/EGit/User_Guide
-     * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
-     * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
-
+ 1. gitlab - code quality testing 
+    * [code quality](gitlab/13-code-quality.md)
+    
+ 1. gitlab - browser performance 
+    * [browser performance](gitlab/14-browser-performance.md)
+    
+ 1. gitlab - kubernetes 
+    * [Vorteile gitlab-agent](/kubernetes/gitlab/advantage-gitlab-agent.md)
+    * [Step 1: Installation gitlab-agent for kubernetes](/kubernetes-gitlab-ci-cd/99-gitlab-agent-with-kubectl.md)
+    * [Step 2: Debugging KUBE_CONTEXT - Community Edition](kubernetes-gitlab-ci-cd/04-fix-problem-context-auto-devops.md)
+    * [Step 3: gitlab-ci.yml setup for deployment and sample manifest](/kubernetes-gitlab-ci-cd/05-setup-deployment-with-sample-manifest.md)
+ 1. Documentation (git)
+    * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
+    * http://wiki.eclipse.org/EGit/User_Guide
+    * [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+    * [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
+ 1. Documentation (gitlab)
+    * https://about.gitlab.com/blog/2020/12/10/basics-of-gitlab-ci-updated/
+ 
 ## Backlog 
    
   1. Eclipse/STS(Spring Tool Suite) 
@@ -81,11 +98,9 @@
      * [Platz sparen mit dem shallow clone + neu pushen](#platz-sparen-mit-dem-shallow-clone-+-neu-pushen)
      * [Branch aus bestehendem Branch neu erstellen (alles auf Anfang!)](#branch-aus-bestehendem-branch-neu-erstellen-alles-auf-anfang!)
      * [Arbeiten mit git replace](https://git-scm.com/book/en/v2/Git-Tools-Replace)
-     * [ssl Verifizierung ausschalten (quick & dirty)](#ssl-verifizierung-ausschalten-quick-&-dirty)
+     * [ssl Verifizierung ausschalten (quick & dirty)](#ssl-verifizierung-ausschalten-quick--dirty)
      * [generic no-ff](#generic-no-ff)
   
-  
-
   1. GIT-Guis
      * https://git-scm.com/download/gui/windows 
      * https://github.com/DmitryZhelnin/git-extensions-intellij
@@ -166,64 +181,9 @@ blob
 
 
 
-## Git log - beautified (commandline) 
 
-  * Why ? 
-    * For later usage, it will be easier to have a beautified log
 
-```
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-```
 
-## Lab 7: Setup beautified log (commandline) 
-
-```
-git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-# use beautified log 
-git lg 
-```
-
-## Branches -> why ? 
-
-  * important concept of git 
-  * work on features easily 
-  * independent from remote repository 
-
-## Create branches -> 1-step-version 
-
-  * git checkout -b feature-4711 
-
-## Branch - which one is active ? 
-
-  * git branch (star means active) 
-
-## change to another branch (commandline) 
-
-  * git checkout feature-4711 
-
-## Lab 8: Create a new branch + work there (commandline) 
-
-```
-git checkout -b feature-4711 
-# check which branch is active 
-git branch 
-
-# create a file feature-4711.txt 
-touch feature-4711.txt 
-# create a line of text into it 
-# with your favourite editor
-# .e.g 
-# Line of code in 4711 
-
-# now commit the changes 
-git status 
-git add .
-git commit -am "New feature-4711.txt" 
-git status
-# do you notice, that the branch is ahead ? 
-git lg 
-```
 
 ##  Merge changes -> merge 
 
@@ -369,9 +329,7 @@ Here are the most important settings for ssh.
   * if not: export GIT_SSH="C:\Program Files\Git\usr\bin\ssh.exe" 
   * in addition in tortoisegit under settings -> network the should be the following: \\ C:\Program Files\Git\usr\bin\ssh.exe 
 
-## Workflows -> gitflow workflow 
 
-{{ :gitflow-workflow-4.png|}}
 
 
   
@@ -905,18 +863,6 @@ git config --global mergetool.keepBackup false
 ## when you have conflict you can open the mergetool (graphical tool with )
 git mergetool
 ```
-
-### GIT pdf
-
-  * https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf
-
-### Conventional Commits
-
-  * https://www.conventionalcommits.org/en/v1.0.0/
-
-### Conventional Commits
-
-  * https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 
 ## Eclipse/STS(Spring Tool Suite) 
 
