@@ -48,6 +48,9 @@
  1. gitlab - code quality testing 
     * [code quality](gitlab/13-code-quality.md)
     
+ 1. gitlab - browser performance 
+    * [browser performance](gitlab/14-browser-performance.md)
+   
  1. Documentation (git)
     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
     * http://wiki.eclipse.org/EGit/User_Guide
@@ -56,7 +59,6 @@
  1. Documentation (gitlab)
     * https://about.gitlab.com/blog/2020/12/10/basics-of-gitlab-ci-updated/
  
-
 ## Backlog 
    
   1. Eclipse/STS(Spring Tool Suite) 
