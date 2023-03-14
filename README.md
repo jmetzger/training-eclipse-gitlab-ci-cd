@@ -44,6 +44,8 @@
  1. gitlab + CI/CD 
     * [gitlab ci/cd Überblick](/gitlab/01-ci-cd-overview.md)
     * [gitlab stages](/gitlab/03-example-running-stages.md)
+    * [gitlab predefined vars](/gitlab/04-predefined-vars.md)
+
  
  1. Documentation (git)
     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
