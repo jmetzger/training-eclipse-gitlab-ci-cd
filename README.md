@@ -43,6 +43,7 @@
   
  1. gitlab + CI/CD 
     * [gitlab ci/cd Überblick](/gitlab/01-ci-cd-overview.md)
+    * [gitlab stages](/gitlab/03-example-running-stages.md)
  
  1. Documentation (git)
     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
@@ -90,8 +91,6 @@
      * [ssl Verifizierung ausschalten (quick & dirty)](/tipps-tricks/ssl-verify.md)
      * [generic no-ff](/tipps-tricks/generic-no-ff.md)
   
-  
-
   1. GIT-Guis
      * https://git-scm.com/download/gui/windows 
      * https://github.com/DmitryZhelnin/git-extensions-intellij
