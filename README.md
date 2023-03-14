@@ -33,20 +33,17 @@
      * [git merge](merge.md)
      * [git tag](tag.md)
      * [git remote -v](remote.md)
-   
  1. Advanced Commands 
      * [git reflog](reflog.md) 
-     * [git reset - Back in Time](reset.md) 
- 
+     * [git reset - Back in Time](reset.md)  
  1. GIT Mergetools 
-     * [git mergetools](/mergetools.md) 
-  
+     * [git mergetools](/mergetools.md)   
  1. gitlab + CI/CD 
     * [gitlab ci/cd Überblick](/gitlab/01-ci-cd-overview.md)
     * [gitlab stages](/gitlab/03-example-running-stages.md)
     * [gitlab predefined vars](/gitlab/04-predefined-vars.md)
-    * [rules](gitlab/05-rules.md)
- 
+    * [rules](gitlab/05-rules.md) 
+    * [image verwenden](gitlab/12-image.md)
  1. Documentation (git)
     * [GIT pdf](https://schulung.t3isp.de/documents/pdfs/git/git-training.pdf)
     * http://wiki.eclipse.org/EGit/User_Guide
