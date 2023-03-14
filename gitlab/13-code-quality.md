@@ -1,7 +1,7 @@
 # Code Quality 
 
 ```
-15. Code Quality Testing 
+
 
 Schritt 0: Prerequisites 
 
